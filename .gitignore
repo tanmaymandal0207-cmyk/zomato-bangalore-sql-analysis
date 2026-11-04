@@ -1,0 +1,11 @@
+# Raw dataset is not redistributed - download from Kaggle (see README)
+data/
+*.csv.gz
+zomato.csv
+
+# OS / editor
+.DS_Store
+Thumbs.db
+~$*.xlsx
+.vscode/
+.idea/
