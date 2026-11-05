@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Popular Isn't Loved</title>
+<meta name="description" content="Zomato Bangalore case study: 165 of the city's most-voted restaurants are rated below 3.5. Who they are, why, and where to act first.">
+<style>
+:root{
+  --bg:#f6f5f2; --card:#fcfcfb; --ink:#0b0b0b; --ink-2:#52514e; --ink-3:#7a7974; --line:#e4e2dc; --grid:#ecebe6;
+  --focus:#eb6834; --focus-soft:#f6c3ac; --peer:#b9b7af; --s1:#2a78d6; --s3:#1baf7a;
+  --good:#0ca30c; --critical:#d03b3b; --chip:#efeee9; --accent-bg:#fdf1eb;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#121211; --card:#1a1a19; --ink:#f0efec; --ink-2:#c3c2b7; --ink-3:#97968e; --line:#2e2e2b; --grid:#262624;
+    --focus:#d95926; --focus-soft:#6b3420; --peer:#5c5b56; --s1:#3987e5; --s3:#199e70; --chip:#262624; --accent-bg:#2a1d16;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#121211; --card:#1a1a19; --ink:#f0efec; --ink-2:#c3c2b7; --ink-3:#97968e; --line:#2e2e2b; --grid:#262624;
+  --focus:#d95926; --focus-soft:#6b3420; --peer:#5c5b56; --s1:#3987e5; --s3:#199e70; --chip:#262624; --accent-bg:#2a1d16;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1180px;margin:0 auto;padding:28px 16px 48px}
+header .eyebrow{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);font-weight:600}
+h1{font-size:34px;line-height:1.15;margin:6px 0 8px;letter-spacing:-.01em}
+h2{font-size:19px;margin:0 0 4px;letter-spacing:-.005em}
+h3{font-size:14px;margin:0 0 6px}
+.lede{font-size:17px;color:var(--ink-2);max-width:820px;margin:0}
+.lede b{color:var(--ink)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 0}
+.chip{background:var(--chip);border-radius:999px;padding:4px 11px;font-size:12.5px;color:var(--ink-2)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
+section{margin-top:22px}
+.sub{color:var(--ink-2);font-size:14px;margin:0 0 14px}
+.problem{display:grid;grid-template-columns:repeat(3,1fr);gap:0;padding:0;overflow:hidden}
+.problem>div{padding:18px 20px;border-right:1px solid var(--line)}
+.problem>div:last-child{border-right:0}
+.problem .k{font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);font-weight:700;margin-bottom:6px}
+.problem p{margin:0;font-size:14.5px;color:var(--ink-2)}
+.problem p b{color:var(--ink)}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.kpi{display:flex;flex-direction:column;gap:10px}
+.kpi .lbl{font-size:13px;color:var(--ink-2);font-weight:600}
+.kpi .val{font-size:34px;font-weight:700;line-height:1;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.kpi .val small{font-size:17px;color:var(--ink-3);font-weight:600}
+.kpi .note{font-size:12.5px;color:var(--ink-3)}
+.cmp{display:grid;grid-template-columns:70px 1fr 46px;gap:5px 8px;align-items:center;font-size:12px;color:var(--ink-2)}
+.cmp .bar{height:10px;background:var(--grid);border-radius:4px;overflow:hidden}
+.cmp .bar i{display:block;height:100%;border-radius:4px}
+.cmp .num{text-align:right;font-variant-numeric:tabular-nums;color:var(--ink)}
+.delta{display:flex;flex-direction:column;gap:2px;font-size:13px;font-weight:700;background:var(--accent-bg);color:var(--ink);border-radius:8px;padding:6px 10px;align-self:stretch;margin-top:auto}
+.delta .ci{font-weight:500;font-size:12px;color:var(--ink-3)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.legend{display:flex;gap:14px;font-size:12.5px;color:var(--ink-2);margin:0 0 6px;flex-wrap:wrap}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend i{width:12px;height:3px;border-radius:2px;display:inline-block}
+.legend i.sq{height:10px;width:10px;border-radius:3px}
+svg{display:block;width:100%;height:auto;overflow:visible}
+svg text{fill:var(--ink-2);font-size:12px;font-family:inherit}
+svg .val{fill:var(--ink);font-weight:600;font-variant-numeric:tabular-nums}
+svg .muted{fill:var(--ink-3)}
+.insight{margin:12px 0 0;font-size:13.5px;color:var(--ink-2);border-left:3px solid var(--focus);padding:2px 0 2px 10px}
+.insight b{color:var(--ink)}
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+th{text-align:left;font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-3);font-weight:700;padding:8px 10px;border-bottom:1px solid var(--line)}
+td{padding:9px 10px;border-bottom:1px solid var(--line);font-variant-numeric:tabular-nums;vertical-align:middle}
+tr:last-child td{border-bottom:0}
+td.n,th.n{text-align:right}
+.share{display:flex;align-items:center;gap:8px}
+.share span{white-space:nowrap}
+.share .bar{flex:0 0 64px;height:8px;background:var(--grid);border-radius:4px;overflow:hidden}
+.share .bar i{display:block;height:100%;background:var(--focus);border-radius:4px}
+.tag{display:inline-block;font-size:11.5px;font-weight:600;border-radius:6px;padding:2px 8px;white-space:nowrap}
+.tag.outlet{background:color-mix(in srgb,var(--s1) 16%,transparent);color:var(--ink)}
+.tag.brand{background:color-mix(in srgb,var(--critical) 16%,transparent);color:var(--ink)}
+.split{display:grid;grid-template-columns:2fr 1fr;gap:14px;align-items:start}
+.diag{display:flex;flex-direction:column;gap:10px}
+.diag .box{border:1px solid var(--line);border-radius:12px;padding:14px}
+.diag .big{font-size:26px;font-weight:700;line-height:1.1}
+.diag p{margin:4px 0 0;font-size:13px;color:var(--ink-2)}
+.recs{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.rec{display:flex;gap:14px}
+.rec .no{flex:0 0 30px;height:30px;border-radius:50%;background:var(--focus);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px}
+.rec p{margin:0;font-size:14px;color:var(--ink-2)}
+.rec .size{margin-top:8px;font-size:12.5px;color:var(--ink-3)}
+.rec .size b{color:var(--ink)}
+.method{display:grid;grid-template-columns:1fr 1fr;gap:18px;font-size:13px;color:var(--ink-2)}
+.method ul{margin:0;padding-left:18px}
+.method li{margin:3px 0}
+footer{margin-top:22px;font-size:12.5px;color:var(--ink-3);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+#tip{position:fixed;pointer-events:none;background:var(--ink);color:var(--card);font-size:12.5px;padding:7px 10px;border-radius:8px;opacity:0;transition:opacity .1s;max-width:260px;z-index:10}
+#tip b{display:block}
+.hit{cursor:default}
+@media (max-width:900px){
+  .kpis{grid-template-columns:repeat(2,1fr)}
+  .grid2,.split,.recs,.method{grid-template-columns:1fr}
+  .problem{grid-template-columns:1fr}.problem>div{border-right:0;border-bottom:1px solid var(--line)}
+}
+@media (max-width:560px){
+  .kpis{grid-template-columns:1fr}
+  h1{font-size:28px}
+  .hide-sm{display:none}
+  table{font-size:12.5px} td,th{padding:8px 6px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="eyebrow">Zomato Bangalore · SQL case study 01</div>
+  <h1>Popular isn't loved</h1>
+  <p class="lede"><b>165 of the city's 1,942 most-voted restaurants are rated below 3.5.</b> Compared with the well-rated restaurants around them, they are more likely to take online orders, more likely to be chain outlets, and twice as likely to be priced ₹301–600 for two. This page shows where they cluster and where to act first.</p>
+  <div class="chips">
+    <span class="chip">Scope: established restaurants (votes above the 242 average of voted restaurants, rated)</span>
+    <span class="chip">Low-rated: rating below 3.5</span>
+    <span class="chip">Peers: established, rated 3.5+ (1,777)</span>
+    <span class="chip">Grain: one row per restaurant, latest snapshot</span>
+  </div>
+</header>
+
+<section class="card problem">
+  <div><div class="k">Business problem</div><p>Discovery on Zomato leans on popularity. These 165 restaurants still hold <b>67,362 votes</b> of customer attention while customers rate them <b>2.93 on average</b>, against 4.11 for their peers.</p></div>
+  <div><div class="k">Question</div><p>What do popular, low-rated restaurants have in common, and is the problem the <b>brand</b> or the <b>individual outlet</b>?</p></div>
+  <div><div class="k">Decision it supports</div><p>Where the restaurant-partner team should spend a <b>quality-improvement programme</b> first, and which outlets to put on the list.</p></div>
+</section>
+
+<section>
+  <div class="kpis" id="kpis"></div>
+</section>
+
+<section class="grid2">
+  <div class="card">
+    <h2>The mid-price trap</h2>
+    <p class="sub">Share of established restaurants rated below 3.5, by price for two</p>
+    <svg id="bands" viewBox="0 0 520 260" role="img" aria-label="Low-rated rate by price band"></svg>
+    <p class="insight"><b>106 of the 165</b> are priced ₹301–600. In that band 16.3% of popular restaurants are low-rated, against 0.8% at ₹1,000+.</p>
+  </div>
+  <div class="card">
+    <h2>Price works differently by format</h2>
+    <p class="sub">Average rating of established restaurants, by price for two</p>
+    <div class="legend"><span><i style="background:var(--s1)"></i>Quick Bites</span><span><i style="background:var(--s3)"></i>Casual Dining</span></div>
+    <svg id="lines" viewBox="0 0 520 240" role="img" aria-label="Average rating by price band for Quick Bites and Casual Dining"></svg>
+    <p class="insight">Quick Bites rate best when cheap (<b>3.98</b> up to ₹300). Casual Dining rates best when premium (<b>4.30</b> at ₹1,000+). Both bottom out at <b>3.75</b> in the ₹301–600 band.</p>
+  </div>
+</section>
+
+<section class="card">
+  <h2>Brand or outlet?</h2>
+  <p class="sub">Chains (5+ outlets) with the most popular, low-rated outlets. "Sister outlets" = the brand's other rated outlets.</p>
+  <div class="split">
+    <div style="overflow-x:auto">
+      <table>
+        <thead><tr><th>Brand</th><th>Low-rated outlets</th><th class="n hide-sm">Votes on them</th><th class="n">Their rating</th><th class="n">Sister outlets</th><th>Diagnosis</th></tr></thead>
+        <tbody id="brands"></tbody>
+      </table>
+    </div>
+    <div class="diag" id="diag"></div>
+  </div>
+</section>
+
+<section class="card">
+  <h2>What to do</h2>
+  <p class="sub">Recommendations, each sized from the data above</p>
+  <div class="recs">
+    <div class="rec"><div class="no">1</div><div><h3>Fix outlets, not brands, where sister outlets are healthy</h3><p>Run outlet audits benchmarked against the same brand's best outlets: same menu and supply chain, so the gap is execution (kitchen, packaging, staff).</p><div class="size" id="r1"></div></div></div>
+    <div class="rec"><div class="no">2</div><div><h3>Put the ₹301–600 band on a watchlist</h3><p>Coach Quick Bites in this band to compete on value and Casual Dining to compete on experience. Mid-priced restaurants that do neither are the ones customers mark down.</p><div class="size" id="r2"></div></div></div>
+    <div class="rec"><div class="no">3</div><div><h3>Test the delivery leg</h3><p>Online-ordering restaurants are much more likely to be low-rated. Check delivery times, packaging and order accuracy for the online outlets on the list before blaming the food.</p><div class="size" id="r3"></div></div></div>
+    <div class="rec"><div class="no">4</div><div><h3>Weight discovery by quality, start with the priority list</h3><p>Blend rating into ranking so votes alone don't keep these outlets on top. Work the list in vote order: the most customers are exposed at the top.</p><div class="size" id="r4"></div></div></div>
+  </div>
+</section>
+
+<section class="card">
+  <h2>Method and caveats</h2>
+  <div class="method">
+    <ul>
+      <li><b>Source:</b> BigQuery <code>restaurants_clean</code> (51,717 listing rows) reduced to 12,453 restaurants (URL path; highest-vote listing kept).</li>
+      <li><b>Established:</b> votes above 242.08 (the average of the 9,446 restaurants with at least one vote) and rated: 1,942 restaurants = 165 low-rated + 1,777 peers.</li>
+      <li><b>Chain:</b> brand name with 5+ outlets city-wide (exact name match). <b>Format:</b> first value of <code>rest_type</code>.</li>
+      <li><b>Ranges:</b> 95% normal-approximation intervals on the difference in proportions. Price cells with fewer than 15 restaurants are hidden.</li>
+    </ul>
+    <ul>
+      <li>These are associations, not causes. Votes are not orders, and ratings are one snapshot.</li>
+      <li>The findings hold at other cut-offs: at a rating below 3.3 or 3.7, low-rated restaurants are still 81–84% online and 42–49% chain, against about 66% and 25% for peers.</li>
+      <li>One residual duplicate sits in the list (Biryani Junction, Bommanahalli, two URLs with 298 votes each), so there are 164 unique outlets. It is flagged in the priority list.</li>
+      <li>8 established restaurants have no listed price; they count in the KPIs but not in the price charts.</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <span>Tanmay Mandal · Zomato Bangalore SQL analysis · queries C01–C04</span>
+  <span>Data: Zomato Bangalore restaurants dataset (Kaggle), cleaned in BigQuery</span>
+</footer>
+</div>
+<div id="tip" role="tooltip"></div>
+
+<script>
+const D = {"kpi": [{"sort_order": 1, "metric": "Restaurants", "unit": "count", "low_rated": 165.0, "peers": 1777.0, "gap": -1612.0, "gap_ci_low_pts": null, "gap_ci_high_pts": null, "ratio": 0.09}, {"sort_order": 2, "metric": "Share of established restaurants", "unit": "pct", "low_rated": 8.5, "peers": 91.5, "gap": -83.01, "gap_ci_low_pts": null, "gap_ci_high_pts": null, "ratio": 0.09}, {"sort_order": 3, "metric": "Average rating", "unit": "rating", "low_rated": 2.93, "peers": 4.11, "gap": -1.17, "gap_ci_low_pts": null, "gap_ci_high_pts": null, "ratio": 0.71}, {"sort_order": 4, "metric": "Votes held", "unit": "count", "low_rated": 67362.0, "peers": 1780029.0, "gap": -1712667.0, "gap_ci_low_pts": null, "gap_ci_high_pts": null, "ratio": 0.04}, {"sort_order": 5, "metric": "Online ordering", "unit": "pct", "low_rated": 84.24, "peers": 66.24, "gap": 18.01, "gap_ci_low_pts": 12.0, "gap_ci_high_pts": 24.0, "ratio": 1.27}, {"sort_order": 6, "metric": "Chain outlet (brand has 5+ outlets)", "unit": "pct", "low_rated": 43.64, "peers": 24.82, "gap": 18.82, "gap_ci_low_pts": 11.0, "gap_ci_high_pts": 26.6, "ratio": 1.76}, {"sort_order": 7, "metric": "Priced Rs 301-600 for two", "unit": "pct", "low_rated": 64.24, "peers": 30.67, "gap": 33.57, "gap_ci_low_pts": 26.0, "gap_ci_high_pts": 41.2, "ratio": 2.09}], "bands": [{"format": "All established", "price_band": "Up to Rs 300", "band_order": 1, "restaurants": 189, "low_rated": 15, "low_rated_rate_pct": 7.9, "avg_rating": 4.01, "share_of_low_rated_pct": 9.1, "base_flag": ""}, {"format": "All established", "price_band": "Rs 301-600", "band_order": 2, "restaurants": 651, "low_rated": 106, "low_rated_rate_pct": 16.3, "avg_rating": 3.85, "share_of_low_rated_pct": 64.2, "base_flag": ""}, {"format": "All established", "price_band": "Rs 601-1,000", "band_order": 3, "restaurants": 582, "low_rated": 38, "low_rated_rate_pct": 6.5, "avg_rating": 3.98, "share_of_low_rated_pct": 23.0, "base_flag": ""}, {"format": "All established", "price_band": "Rs 1,000+", "band_order": 4, "restaurants": 512, "low_rated": 4, "low_rated_rate_pct": 0.8, "avg_rating": 4.25, "share_of_low_rated_pct": 2.4, "base_flag": ""}, {"format": "All established", "price_band": "Not listed", "band_order": 5, "restaurants": 8, "low_rated": 2, "low_rated_rate_pct": 25.0, "avg_rating": 3.86, "share_of_low_rated_pct": 1.2, "base_flag": "small base"}, {"format": "Quick Bites", "price_band": "Up to Rs 300", "band_order": 1, "restaurants": 136, "low_rated": 12, "low_rated_rate_pct": 8.8, "avg_rating": 3.98, "share_of_low_rated_pct": 19.7, "base_flag": ""}, {"format": "Quick Bites", "price_band": "Rs 301-600", "band_order": 2, "restaurants": 235, "low_rated": 45, "low_rated_rate_pct": 19.1, "avg_rating": 3.75, "share_of_low_rated_pct": 73.8, "base_flag": ""}, {"format": "Quick Bites", "price_band": "Rs 601-1,000", "band_order": 3, "restaurants": 14, "low_rated": 4, "low_rated_rate_pct": 28.6, "avg_rating": 3.62, "share_of_low_rated_pct": 6.6, "base_flag": "small base"}, {"format": "Quick Bites", "price_band": "Not listed", "band_order": 5, "restaurants": 1, "low_rated": 0, "low_rated_rate_pct": 0.0, "avg_rating": 4.2, "share_of_low_rated_pct": 0.0, "base_flag": "small base"}, {"format": "Casual Dining", "price_band": "Up to Rs 300", "band_order": 1, "restaurants": 4, "low_rated": 2, "low_rated_rate_pct": 50.0, "avg_rating": 3.15, "share_of_low_rated_pct": 2.5, "base_flag": "small base"}, {"format": "Casual Dining", "price_band": "Rs 301-600", "band_order": 2, "restaurants": 206, "low_rated": 42, "low_rated_rate_pct": 20.4, "avg_rating": 3.75, "share_of_low_rated_pct": 53.2, "base_flag": ""}, {"format": "Casual Dining", "price_band": "Rs 601-1,000", "band_order": 3, "restaurants": 433, "low_rated": 33, "low_rated_rate_pct": 7.6, "avg_rating": 3.93, "share_of_low_rated_pct": 41.8, "base_flag": ""}, {"format": "Casual Dining", "price_band": "Rs 1,000+", "band_order": 4, "restaurants": 264, "low_rated": 1, "low_rated_rate_pct": 0.4, "avg_rating": 4.3, "share_of_low_rated_pct": 1.3, "base_flag": ""}, {"format": "Casual Dining", "price_band": "Not listed", "band_order": 5, "restaurants": 4, "low_rated": 1, "low_rated_rate_pct": 25.0, "avg_rating": 3.85, "share_of_low_rated_pct": 1.3, "base_flag": "small base"}], "brands": [{"brand": "Domino's Pizza", "low_rated_outlets": 9, "brand_outlets": 38, "pct_outlets_low_rated": 23.7, "votes_on_low_rated_outlets": 3371, "avg_rating_low_rated_outlets": 2.93, "brand_avg_rating": 3.49, "other_outlets_avg_rating": 3.66, "diagnosis": "Outlet execution"}, {"brand": "A2B - Adyar Ananda Bhavan", "low_rated_outlets": 7, "brand_outlets": 23, "pct_outlets_low_rated": 30.4, "votes_on_low_rated_outlets": 3227, "avg_rating_low_rated_outlets": 2.79, "brand_avg_rating": 3.34, "other_outlets_avg_rating": 3.58, "diagnosis": "Outlet execution"}, {"brand": "KFC", "low_rated_outlets": 7, "brand_outlets": 28, "pct_outlets_low_rated": 25.0, "votes_on_low_rated_outlets": 2987, "avg_rating_low_rated_outlets": 3.13, "brand_avg_rating": 3.63, "other_outlets_avg_rating": 3.8, "diagnosis": "Outlet execution"}, {"brand": "Pizza Hut", "low_rated_outlets": 5, "brand_outlets": 37, "pct_outlets_low_rated": 13.5, "votes_on_low_rated_outlets": 1846, "avg_rating_low_rated_outlets": 2.82, "brand_avg_rating": 3.33, "other_outlets_avg_rating": 3.41, "diagnosis": "Brand-wide"}, {"brand": "FreshMenu", "low_rated_outlets": 4, "brand_outlets": 12, "pct_outlets_low_rated": 33.3, "votes_on_low_rated_outlets": 2546, "avg_rating_low_rated_outlets": 3.2, "brand_avg_rating": 3.42, "other_outlets_avg_rating": 3.54, "diagnosis": "Outlet execution"}, {"brand": "Vasudev Adiga's", "low_rated_outlets": 4, "brand_outlets": 10, "pct_outlets_low_rated": 40.0, "votes_on_low_rated_outlets": 1200, "avg_rating_low_rated_outlets": 2.68, "brand_avg_rating": 3.12, "other_outlets_avg_rating": 3.42, "diagnosis": "Brand-wide"}, {"brand": "Moriz Restaurant", "low_rated_outlets": 3, "brand_outlets": 5, "pct_outlets_low_rated": 60.0, "votes_on_low_rated_outlets": 3933, "avg_rating_low_rated_outlets": 3.03, "brand_avg_rating": 2.94, "other_outlets_avg_rating": 2.8, "diagnosis": "Brand-wide"}, {"brand": "Mast Kalandar", "low_rated_outlets": 3, "brand_outlets": 8, "pct_outlets_low_rated": 37.5, "votes_on_low_rated_outlets": 1141, "avg_rating_low_rated_outlets": 2.33, "brand_avg_rating": 2.39, "other_outlets_avg_rating": 2.42, "diagnosis": "Brand-wide"}, {"brand": "Kabab Magic", "low_rated_outlets": 3, "brand_outlets": 9, "pct_outlets_low_rated": 33.3, "votes_on_low_rated_outlets": 1063, "avg_rating_low_rated_outlets": 3.03, "brand_avg_rating": 3.6, "other_outlets_avg_rating": 3.88, "diagnosis": "Outlet execution"}, {"brand": "Thalassery Restaurant", "low_rated_outlets": 2, "brand_outlets": 8, "pct_outlets_low_rated": 25.0, "votes_on_low_rated_outlets": 1071, "avg_rating_low_rated_outlets": 3.05, "brand_avg_rating": 3.56, "other_outlets_avg_rating": 3.76, "diagnosis": "Outlet execution"}, {"brand": "Kritunga Restaurant", "low_rated_outlets": 2, "brand_outlets": 6, "pct_outlets_low_rated": 33.3, "votes_on_low_rated_outlets": 939, "avg_rating_low_rated_outlets": 2.8, "brand_avg_rating": 3.45, "other_outlets_avg_rating": 3.77, "diagnosis": "Outlet execution"}, {"brand": "Wangs Kitchen", "low_rated_outlets": 2, "brand_outlets": 9, "pct_outlets_low_rated": 22.2, "votes_on_low_rated_outlets": 822, "avg_rating_low_rated_outlets": 2.7, "brand_avg_rating": 2.71, "other_outlets_avg_rating": 2.71, "diagnosis": "Brand-wide"}, {"brand": "Crunch Pizzas", "low_rated_outlets": 2, "brand_outlets": 12, "pct_outlets_low_rated": 16.7, "votes_on_low_rated_outlets": 804, "avg_rating_low_rated_outlets": 2.75, "brand_avg_rating": 2.71, "other_outlets_avg_rating": 2.7, "diagnosis": "Brand-wide"}, {"brand": "Ammi's Biryani", "low_rated_outlets": 2, "brand_outlets": 8, "pct_outlets_low_rated": 25.0, "votes_on_low_rated_outlets": 734, "avg_rating_low_rated_outlets": 2.25, "brand_avg_rating": 2.59, "other_outlets_avg_rating": 2.7, "diagnosis": "Brand-wide"}, {"brand": "Rahhams", "low_rated_outlets": 2, "brand_outlets": 5, "pct_outlets_low_rated": 40.0, "votes_on_low_rated_outlets": 733, "avg_rating_low_rated_outlets": 2.7, "brand_avg_rating": 3.12, "other_outlets_avg_rating": 3.4, "diagnosis": "Brand-wide"}, {"brand": "Subway", "low_rated_outlets": 2, "brand_outlets": 25, "pct_outlets_low_rated": 8.0, "votes_on_low_rated_outlets": 643, "avg_rating_low_rated_outlets": 2.75, "brand_avg_rating": 3.45, "other_outlets_avg_rating": 3.51, "diagnosis": "Outlet execution"}, {"brand": "Nandhini Deluxe", "low_rated_outlets": 2, "brand_outlets": 10, "pct_outlets_low_rated": 20.0, "votes_on_low_rated_outlets": 551, "avg_rating_low_rated_outlets": 2.75, "brand_avg_rating": 3.4, "other_outlets_avg_rating": 3.56, "diagnosis": "Outlet execution"}, {"brand": "Foodiction", "low_rated_outlets": 1, "brand_outlets": 5, "pct_outlets_low_rated": 20.0, "votes_on_low_rated_outlets": 506, "avg_rating_low_rated_outlets": 2.8, "brand_avg_rating": 2.85, "other_outlets_avg_rating": 2.9, "diagnosis": "Brand-wide"}, {"brand": "McDonald's", "low_rated_outlets": 1, "brand_outlets": 24, "pct_outlets_low_rated": 4.2, "votes_on_low_rated_outlets": 404, "avg_rating_low_rated_outlets": 3.0, "brand_avg_rating": 3.59, "other_outlets_avg_rating": 3.61, "diagnosis": "Outlet execution"}, {"brand": "Zeeshan", "low_rated_outlets": 1, "brand_outlets": 5, "pct_outlets_low_rated": 20.0, "votes_on_low_rated_outlets": 320, "avg_rating_low_rated_outlets": 3.1, "brand_avg_rating": 3.18, "other_outlets_avg_rating": 3.2, "diagnosis": "Brand-wide"}, {"brand": "Shaadi Ki Biryani", "low_rated_outlets": 1, "brand_outlets": 5, "pct_outlets_low_rated": 20.0, "votes_on_low_rated_outlets": 303, "avg_rating_low_rated_outlets": 2.8, "brand_avg_rating": 2.83, "other_outlets_avg_rating": 2.83, "diagnosis": "Brand-wide"}, {"brand": "Pot Biryani", "low_rated_outlets": 1, "brand_outlets": 5, "pct_outlets_low_rated": 20.0, "votes_on_low_rated_outlets": 297, "avg_rating_low_rated_outlets": 2.8, "brand_avg_rating": 3.34, "other_outlets_avg_rating": 3.47, "diagnosis": "Brand-wide"}, {"brand": "Beijing Bites", "low_rated_outlets": 1, "brand_outlets": 25, "pct_outlets_low_rated": 4.0, "votes_on_low_rated_outlets": 292, "avg_rating_low_rated_outlets": 3.2, "brand_avg_rating": 3.61, "other_outlets_avg_rating": 3.63, "diagnosis": "Outlet execution"}, {"brand": "Hatti Punjab Di", "low_rated_outlets": 1, "brand_outlets": 7, "pct_outlets_low_rated": 14.3, "votes_on_low_rated_outlets": 291, "avg_rating_low_rated_outlets": 3.0, "brand_avg_rating": 3.28, "other_outlets_avg_rating": 3.35, "diagnosis": "Brand-wide"}, {"brand": "Chung's Chinese Corner", "low_rated_outlets": 1, "brand_outlets": 5, "pct_outlets_low_rated": 20.0, "votes_on_low_rated_outlets": 290, "avg_rating_low_rated_outlets": 2.7, "brand_avg_rating": 3.38, "other_outlets_avg_rating": 3.55, "diagnosis": "Outlet execution"}, {"brand": "Laddoos", "low_rated_outlets": 1, "brand_outlets": 5, "pct_outlets_low_rated": 20.0, "votes_on_low_rated_outlets": 280, "avg_rating_low_rated_outlets": 3.4, "brand_avg_rating": 3.2, "other_outlets_avg_rating": 3.15, "diagnosis": "Brand-wide"}, {"brand": "Sherlock's Pub", "low_rated_outlets": 1, "brand_outlets": 6, "pct_outlets_low_rated": 16.7, "votes_on_low_rated_outlets": 273, "avg_rating_low_rated_outlets": 3.3, "brand_avg_rating": 3.77, "other_outlets_avg_rating": 3.86, "diagnosis": "Outlet execution"}, {"brand": "Punjabi Tadka", "low_rated_outlets": 1, "brand_outlets": 6, "pct_outlets_low_rated": 16.7, "votes_on_low_rated_outlets": 270, "avg_rating_low_rated_outlets": 2.6, "brand_avg_rating": 2.92, "other_outlets_avg_rating": 2.98, "diagnosis": "Brand-wide"}], "extra": {"online_rate": 10.562310030395135, "offline_rate": 4.15335463258786, "top20_votes": 16656, "list_votes": 67362, "top20_share": 24.726106707045517}};
+const fmt = (n, d = 0) => Number(n).toLocaleString('en-IN', { minimumFractionDigits: d, maximumFractionDigits: d });
+const $ = (id) => document.getElementById(id);
+const tip = $('tip');
+function bindTip(el, html) {
+  el.addEventListener('mousemove', (e) => { tip.innerHTML = html; tip.style.opacity = 1; const w = tip.offsetWidth; tip.style.left = Math.min(e.clientX + 14, innerWidth - w - 8) + 'px'; tip.style.top = (e.clientY + 14) + 'px'; });
+  el.addEventListener('mouseleave', () => { tip.style.opacity = 0; });
+}
+const NS = 'http://www.w3.org/2000/svg';
+function el(tag, attrs, parent, text) { const n = document.createElementNS(NS, tag); for (const k in attrs) n.setAttribute(k, attrs[k]); if (text != null) n.textContent = text; if (parent) parent.appendChild(n); return n; }
+function roundedTopBar(x, y, w, h, r) { r = Math.min(r, h, w / 2); return `M${x},${y + h}V${y + r}Q${x},${y} ${x + r},${y}H${x + w - r}Q${x + w},${y} ${x + w},${y + r}V${y + h}Z`; }
+
+/* ---------- KPI tiles: low-rated vs peers ---------- */
+(function kpis() {
+  const k = Object.fromEntries(D.kpi.map((r) => [r.sort_order, r]));
+  const tiles = [
+    { lbl: 'Popular but rated below 3.5', val: `${fmt(k[1].low_rated)}<small> / ${fmt(k[1].low_rated + k[1].peers)}</small>`, note: `${fmt(k[2].low_rated, 1)}% of established restaurants · ${fmt(k[4].low_rated)} votes`,
+      rows: [['This group', k[3].low_rated, 5, 2], ['Peers', k[3].peers, 5, 2]], cmpLbl: 'Average rating (out of 5)', delta: `${fmt(k[3].gap, 2)} rating points`, ci: '' },
+    { lbl: 'Take online orders', val: `${fmt(k[5].low_rated, 1)}%`, rows: [['This group', k[5].low_rated, 100, 1], ['Peers', k[5].peers, 100, 1]], delta: `+${fmt(k[5].gap, 1)} pts · ${fmt(k[5].ratio, 2)}×`, ci: `95% range +${fmt(k[5].gap_ci_low_pts, 1)} to +${fmt(k[5].gap_ci_high_pts, 1)}` },
+    { lbl: 'Are chain outlets (5+)', val: `${fmt(k[6].low_rated, 1)}%`, rows: [['This group', k[6].low_rated, 100, 1], ['Peers', k[6].peers, 100, 1]], delta: `+${fmt(k[6].gap, 1)} pts · ${fmt(k[6].ratio, 2)}×`, ci: `95% range +${fmt(k[6].gap_ci_low_pts, 1)} to +${fmt(k[6].gap_ci_high_pts, 1)}` },
+    { lbl: 'Priced ₹301–600 for two', val: `${fmt(k[7].low_rated, 1)}%`, rows: [['This group', k[7].low_rated, 100, 1], ['Peers', k[7].peers, 100, 1]], delta: `+${fmt(k[7].gap, 1)} pts · ${fmt(k[7].ratio, 2)}×`, ci: `95% range +${fmt(k[7].gap_ci_low_pts, 1)} to +${fmt(k[7].gap_ci_high_pts, 1)}` },
+  ];
+  $('kpis').innerHTML = tiles.map((t) => `
+    <div class="card kpi">
+      <div class="lbl">${t.lbl}</div>
+      <div class="val">${t.val}</div>
+      ${t.note ? `<div class="note">${t.note}</div>` : ''}
+      ${t.cmpLbl ? `<div class="note" style="margin-bottom:-4px">${t.cmpLbl}</div>` : ''}
+      <div class="cmp">${t.rows.map(([n, v, max, d], i) => `<span>${n}</span><div class="bar"><i style="width:${(100 * v / max).toFixed(1)}%;background:${i ? 'var(--peer)' : 'var(--focus)'}"></i></div><span class="num">${fmt(v, d)}${max === 100 ? '%' : ''}</span>`).join('')}</div>
+      <div class="delta">${t.delta}${t.ci ? `<span class="ci">${t.ci}</span>` : ''}</div>
+    </div>`).join('');
+})();
+
+/* ---------- Chart A: low-rated rate by price band ---------- */
+(function bands() {
+  const svg = $('bands');
+  const rows = D.bands.filter((r) => r.format === 'All established' && r.band_order <= 4);
+  const W = 520, H = 260, m = { l: 36, r: 8, t: 26, b: 52 };
+  const iw = W - m.l - m.r, ih = H - m.t - m.b, max = 20;
+  const y = (v) => m.t + ih - (v / max) * ih;
+  [0, 5, 10, 15, 20].forEach((t) => { el('line', { x1: m.l, x2: W - m.r, y1: y(t), y2: y(t), stroke: 'var(--grid)' }, svg); el('text', { x: m.l - 8, y: y(t) + 4, 'text-anchor': 'end', class: 'muted' }, svg, t + '%'); });
+  const avg = D.kpi.find((r) => r.sort_order === 2).low_rated;
+  const bw = iw / rows.length, w = Math.min(64, bw * 0.55);
+  rows.forEach((r, i) => {
+    const cx = m.l + bw * i + bw / 2, hl = r.band_order === 2;
+    el('path', { d: roundedTopBar(cx - w / 2, y(r.low_rated_rate_pct), w, y(0) - y(r.low_rated_rate_pct), 4), fill: hl ? 'var(--focus)' : 'var(--focus-soft)' }, svg);
+    el('text', { x: cx, y: y(r.low_rated_rate_pct) - 7, 'text-anchor': 'middle', class: 'val' }, svg, fmt(r.low_rated_rate_pct, 1) + '%');
+    el('text', { x: cx, y: H - m.b + 18, 'text-anchor': 'middle' }, svg, r.price_band.replace('Rs ', '₹').replace('Up to ₹', 'Up to ₹'));
+    el('text', { x: cx, y: H - m.b + 34, 'text-anchor': 'middle', class: 'muted' }, svg, `${r.low_rated} of ${fmt(r.restaurants)}`);
+    const hit = el('rect', { x: cx - bw / 2, y: m.t, width: bw, height: ih, fill: 'transparent', class: 'hit' }, svg);
+    bindTip(hit, `<b>${r.price_band.replace('Rs ', '₹')}</b>${r.low_rated} of ${fmt(r.restaurants)} established restaurants rated below 3.5 (${fmt(r.low_rated_rate_pct, 1)}%)<br>${fmt(r.share_of_low_rated_pct, 1)}% of the 165 · avg rating ${fmt(r.avg_rating, 2)}`);
+  });
+  el('line', { x1: m.l, x2: W - m.r, y1: y(avg), y2: y(avg), stroke: 'var(--ink-3)', 'stroke-dasharray': '4 4' }, svg);
+  el('text', { x: W - m.r, y: y(avg) - 6, 'text-anchor': 'end', class: 'muted' }, svg, `All established ${fmt(avg, 1)}%`);
+})();
+
+/* ---------- Chart B: average rating by price band, by format ---------- */
+(function lines() {
+  const svg = $('lines');
+  const W = 520, H = 240, m = { l: 40, r: 96, t: 14, b: 34 };
+  const iw = W - m.l - m.r, ih = H - m.t - m.b, lo = 3.5, hi = 4.4;
+  const bands = ['Up to Rs 300', 'Rs 301-600', 'Rs 601-1,000', 'Rs 1,000+'];
+  const x = (i) => m.l + (iw / (bands.length - 1)) * i;
+  const y = (v) => m.t + ih - ((v - lo) / (hi - lo)) * ih;
+  [3.5, 3.7, 3.9, 4.1, 4.3].forEach((t) => { el('line', { x1: m.l, x2: m.l + iw, y1: y(t), y2: y(t), stroke: 'var(--grid)' }, svg); el('text', { x: m.l - 8, y: y(t) + 4, 'text-anchor': 'end', class: 'muted' }, svg, t.toFixed(1)); });
+  bands.forEach((b, i) => el('text', { x: x(i), y: H - 10, 'text-anchor': 'middle' }, svg, b.replace('Rs ', '₹')));
+  const series = [['Quick Bites', 'var(--s1)'], ['Casual Dining', 'var(--s3)']];
+  const pts = [];
+  series.forEach(([f, c]) => {
+    const rs = D.bands.filter((r) => r.format === f && r.band_order <= 4 && r.restaurants >= 15).sort((a, b) => a.band_order - b.band_order);
+    el('path', { d: rs.map((r, i) => `${i ? 'L' : 'M'}${x(r.band_order - 1)},${y(r.avg_rating)}`).join(''), fill: 'none', stroke: c, 'stroke-width': 2, 'stroke-linejoin': 'round' }, svg);
+    rs.forEach((r) => { el('circle', { cx: x(r.band_order - 1), cy: y(r.avg_rating), r: 4.5, fill: c, stroke: 'var(--card)', 'stroke-width': 2 }, svg); pts.push([f, r]); });
+    if (f === 'Casual Dining') {
+      const last = rs[rs.length - 1];
+      el('text', { x: x(last.band_order - 1) + 10, y: y(last.avg_rating) + 4, class: 'val' }, svg, `${fmt(last.avg_rating, 2)}`);
+      el('text', { x: x(last.band_order - 1) + 10, y: y(last.avg_rating) + 19, class: 'muted' }, svg, f);
+    } else {
+      const first = rs[0];
+      el('text', { x: x(0) + 12, y: y(first.avg_rating) - 8, class: 'val' }, svg, `${fmt(first.avg_rating, 2)}`);
+      el('text', { x: x(0) + 44, y: y(first.avg_rating) - 8, class: 'muted' }, svg, f);
+    }
+  });
+  const mid = pts.filter(([, r]) => r.band_order === 2).map(([, r]) => r.avg_rating);
+  el('text', { x: x(1), y: y(Math.min(...mid)) + 22, 'text-anchor': 'middle', class: 'val' }, svg, fmt(Math.min(...mid), 2) === fmt(Math.max(...mid), 2) ? fmt(Math.min(...mid), 2) : `${fmt(Math.min(...mid), 2)}–${fmt(Math.max(...mid), 2)}`);
+  el('text', { x: x(1), y: y(Math.min(...mid)) + 37, 'text-anchor': 'middle', class: 'muted' }, svg, 'both formats');
+  bands.forEach((b, i) => {
+    const here = pts.filter(([, r]) => r.band_order === i + 1);
+    if (!here.length) return;
+    const hit = el('rect', { x: x(i) - iw / 6, y: m.t, width: iw / 3, height: ih, fill: 'transparent', class: 'hit' }, svg);
+    bindTip(hit, `<b>${b.replace('Rs ', '₹')}</b>` + here.map(([f, r]) => `${f}: ${fmt(r.avg_rating, 2)} avg rating (${fmt(r.restaurants)} restaurants, ${fmt(r.low_rated_rate_pct, 1)}% below 3.5)`).join('<br>'));
+  });
+})();
+
+/* ---------- Table + diagnosis ---------- */
+(function brands() {
+  const top = D.brands.slice(0, 8);
+  $('brands').innerHTML = top.map((b) => `<tr>
+    <td>${b.brand}</td>
+    <td><div class="share"><div class="bar"><i style="width:${(100 * b.low_rated_outlets / b.brand_outlets).toFixed(1)}%"></i></div><span>${b.low_rated_outlets} of ${b.brand_outlets}</span></div></td>
+    <td class="n hide-sm">${fmt(b.votes_on_low_rated_outlets)}</td>
+    <td class="n">${fmt(b.avg_rating_low_rated_outlets, 2)}</td>
+    <td class="n">${fmt(b.other_outlets_avg_rating, 2)}</td>
+    <td><span class="tag ${b.diagnosis === 'Brand-wide' ? 'brand' : 'outlet'}">${b.diagnosis}</span></td></tr>`).join('');
+  const agg = (d) => { const r = D.brands.filter((b) => b.diagnosis === d); return { brands: r.length, outlets: r.reduce((s, b) => s + b.low_rated_outlets, 0), votes: r.reduce((s, b) => s + b.votes_on_low_rated_outlets, 0) }; };
+  const o = agg('Outlet execution'), w = agg('Brand-wide'), chainOutlets = o.outlets + w.outlets;
+  $('diag').innerHTML = `
+    <div class="box"><span class="tag outlet">Outlet execution</span><div class="big" style="margin-top:8px">${o.outlets} outlets</div><p>across ${o.brands} chains whose sister outlets average 3.5 or more. The brand works elsewhere, so these outlets can be fixed.</p></div>
+    <div class="box"><span class="tag brand">Brand-wide</span><div class="big" style="margin-top:8px">${w.outlets} outlets</div><p>across ${w.brands} chains whose sister outlets also average below 3.5. These need a menu, price or concept review, not an outlet audit.</p></div>
+    <p class="note" style="font-size:12.5px;color:var(--ink-3);margin:0">${chainOutlets} of the 165 are chain outlets. The other ${165 - chainOutlets} are independents or small groups.</p>`;
+  $('r1').innerHTML = `Size: <b>${o.outlets} outlets in ${o.brands} chains</b>, led by Domino's, A2B and KFC.`;
+  const mid = D.bands.find((r) => r.format === 'All established' && r.band_order === 2);
+  $('r2').innerHTML = `Size: <b>${mid.low_rated} of 165</b> low-rated restaurants, out of ${fmt(mid.restaurants)} established in the band (${fmt(mid.low_rated_rate_pct, 1)}%).`;
+  $('r3').innerHTML = `Size: online restaurants are <b>${fmt(D.extra.online_rate, 1)}%</b> low-rated vs <b>${fmt(D.extra.offline_rate, 1)}%</b> without online ordering (${fmt(D.extra.online_rate / D.extra.offline_rate, 1)}×).`;
+  $('r4').innerHTML = `Size: the top 20 outlets hold <b>${fmt(D.extra.top20_votes)} votes</b>, ${fmt(D.extra.top20_share, 0)}% of the ${fmt(D.extra.list_votes)} on the list.`;
+})();
+</script>
+</body>
+</html>
