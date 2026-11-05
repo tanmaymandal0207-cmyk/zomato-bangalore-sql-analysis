@@ -1,0 +1,8 @@
+sort_order,metric,unit,low_rated,peers,gap,gap_ci_low_pts,gap_ci_high_pts,ratio
+1,Restaurants,count,165.0,1777.0,-1612.0,,,0.09
+2,Share of established restaurants,pct,8.5,91.5,-83.01,,,0.09
+3,Average rating,rating,2.93,4.11,-1.17,,,0.71
+4,Votes held,count,67362.0,1780029.0,-1712667.0,,,0.04
+5,Online ordering,pct,84.24,66.24,18.01,12,24.0,1.27
+6,Chain outlet (brand has 5+ outlets),pct,43.64,24.82,18.82,11,26.6,1.76
+7,Priced Rs 301-600 for two,pct,64.24,30.67,33.57,26,41.2,2.09

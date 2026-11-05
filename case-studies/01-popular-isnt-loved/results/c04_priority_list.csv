@@ -1,0 +1,166 @@
+priority_rank,restaurant_id,name,location,main_type,price_band,approx_cost_for_two,online_order,brand_outlets,chain_5_plus,votes,rating,possible_duplicate
+1,https://www.zomato.com/bangalore/moriz-restaurant-brookefield,Moriz Restaurant,Brookefield,Casual Dining,"Rs 601-1,000",750,Yes,5,Yes,1884,2.8,No
+2,https://www.zomato.com/bangalore/moriz-restaurant-electronic-city,Moriz Restaurant,Electronic City,Casual Dining,"Rs 601-1,000",700,Yes,5,Yes,1365,3.1,No
+3,https://www.zomato.com/bangalore/chaipatty-indiranagar,Chaipatty,Indiranagar,Cafe,Not listed,,No,1,No,1275,3.0,No
+4,https://www.zomato.com/bangalore/tadka-singh-indiranagar,Tadka Singh,Indiranagar,Casual Dining,Not listed,,No,1,No,946,3.4,No
+5,https://www.zomato.com/bangalore/delhi-food-point-koramangala-1st-block,Delhi Food Point,Koramangala 1st Block,Quick Bites,Up to Rs 300,250,Yes,1,No,912,3.3,No
+6,https://www.zomato.com/bangalore/lazeez-koramangala-5th-block,Lazeez,Koramangala 5th Block,Casual Dining,Rs 301-600,600,Yes,3,No,911,3.1,No
+7,https://www.zomato.com/FreshMenuWhitefield,FreshMenu,Whitefield,Delivery,Rs 301-600,450,Yes,12,Yes,835,3.2,No
+8,https://www.zomato.com/bangalore/savoury-restaurant-sarjapur-road,Savoury Restaurant,Sarjapur Road,Casual Dining,"Rs 601-1,000",800,Yes,4,No,833,2.9,No
+9,https://www.zomato.com/bangalore/m-m-a-kababs-biriyani-center-brookefield,M.M.A. Kabab's & Biriyani Center,Brookefield,Quick Bites,Rs 301-600,400,Yes,1,No,802,3.3,No
+10,https://www.zomato.com/bangalore/biriyani-nights-new-bel-road,Biriyani Nights,New BEL Road,Takeaway,Rs 301-600,500,Yes,2,No,713,3.2,No
+11,https://www.zomato.com/bangalore/moriz-restaurant-1-marathahalli,Moriz Restaurant,Marathahalli,Casual Dining,"Rs 601-1,000",800,Yes,5,Yes,684,3.2,No
+12,https://www.zomato.com/bangalore/kfc-indiranagar,KFC,Indiranagar,Quick Bites,Rs 301-600,450,Yes,28,Yes,668,3.1,No
+13,https://www.zomato.com/bangalore/kfc-kammanahalli,KFC,Kammanahalli,Quick Bites,Rs 301-600,450,Yes,28,Yes,639,3.1,No
+14,https://www.zomato.com/FreshMenuJPNagar,FreshMenu,Bannerghatta Road,Delivery,Rs 301-600,450,Yes,12,Yes,628,3.3,No
+15,https://www.zomato.com/bangalore/night-food-joint-nagawara,Night Food Joint,Nagawara,Quick Bites,Rs 301-600,500,Yes,3,No,619,2.9,No
+16,https://www.zomato.com/bangalore/a2b-adyar-ananda-bhavan-marathahalli,A2B - Adyar Ananda Bhavan,Marathahalli,Casual Dining,Rs 301-600,400,Yes,23,Yes,602,2.7,No
+17,https://www.zomato.com/bangalore/kritunga-restaurant-1-brookefield,Kritunga Restaurant,Brookefield,Casual Dining,"Rs 601-1,000",650,No,6,Yes,595,2.9,No
+18,https://www.zomato.com/bangalore/swasthi-spice-restaurant-rajajinagar,Swasthi Spice Restaurant,Rajajinagar,Casual Dining,Rs 301-600,600,Yes,1,No,590,3.4,No
+19,https://www.zomato.com/bangalore/aathurar-jeevan-bhima-nagar,Aathurar,Jeevan Bhima Nagar,Casual Dining,Rs 301-600,600,Yes,1,No,584,3.3,No
+20,https://www.zomato.com/bangalore/kachori-kafe-hsr,Kachori Kafe,HSR,Quick Bites,Up to Rs 300,300,Yes,1,No,571,3.2,No
+21,https://www.zomato.com/bangalore/a2b-adyar-ananda-bhavan-indiranagar-bangalore,A2B - Adyar Ananda Bhavan,Indiranagar,Casual Dining,Rs 301-600,400,Yes,23,Yes,570,3.0,No
+22,https://www.zomato.com/bangalore/thalassery-restaurant-whitefield,Thalassery Restaurant,Whitefield,Casual Dining,Rs 301-600,500,Yes,8,Yes,550,2.9,No
+23,https://www.zomato.com/bangalore/mast-kalandar-koramangala-4th-block,Mast Kalandar,Koramangala 4th Block,Casual Dining,Rs 301-600,450,No,8,Yes,547,2.5,No
+24,https://www.zomato.com/bangalore/freshmenu-electronic-city,FreshMenu,South Bangalore,Delivery,Rs 301-600,450,Yes,12,Yes,546,3.0,No
+25,https://www.zomato.com/bangalore/a2b-adyar-ananda-bhavan-whitefield,A2B - Adyar Ananda Bhavan,Whitefield,Casual Dining,Rs 301-600,400,Yes,23,Yes,544,2.5,No
+26,https://www.zomato.com/bangalore/lakeview-milkbar-indiranagar,Lakeview Milkbar,Indiranagar,Dessert Parlor,Rs 301-600,600,No,4,No,544,2.9,No
+27,https://www.zomato.com/bangalore/freshmenu-rajajinagar,FreshMenu,West Bangalore,Delivery,Rs 301-600,450,Yes,12,Yes,537,3.3,No
+28,https://www.zomato.com/bangalore/thalassery-restaurant-marathahalli,Thalassery Restaurant,Marathahalli,Quick Bites,Rs 301-600,500,Yes,8,Yes,521,3.2,No
+29,https://www.zomato.com/bangalore/u-p-dhaba-whitefield-bangalore,U.P. Dhaba,Whitefield,Quick Bites,Rs 301-600,350,Yes,1,No,515,2.8,No
+30,https://www.zomato.com/bangalore/olive-era-kumaraswamy-layout-bangalore,Olive - Era,Kumaraswamy Layout,Casual Dining,"Rs 601-1,000",700,Yes,1,No,513,3.3,No
+31,https://www.zomato.com/bangalore/foodiction-1-banashankari,Foodiction,Banashankari,Quick Bites,Rs 301-600,500,Yes,5,Yes,506,2.8,No
+32,https://www.zomato.com/bangalore/refresh-brookefield,Refresh,Brookefield,Cafe,Rs 301-600,500,Yes,3,No,503,3.2,No
+33,https://www.zomato.com/bangalore/midnight-food-point-marathahalli,Midnight Food Point,Marathahalli,,Rs 301-600,500,Yes,2,No,492,2.6,No
+34,https://www.zomato.com/bangalore/a2b-adyar-ananda-bhavan-hsr-bangalore,A2B - Adyar Ananda Bhavan,HSR,Casual Dining,Rs 301-600,400,Yes,23,Yes,484,2.8,No
+35,https://www.zomato.com/bangalore/bageecha-marathahalli,Bageecha,Marathahalli,Casual Dining,"Rs 601-1,000",650,Yes,1,No,479,2.2,No
+36,https://www.zomato.com/bangalore/dominos-pizza-3-electronic-city,Domino's Pizza,Electronic City,Quick Bites,Rs 301-600,400,Yes,38,Yes,477,2.7,No
+37,https://www.zomato.com/bangalore/crunch-pizzas-btm,Crunch Pizzas,BTM,Quick Bites,Rs 301-600,600,Yes,12,Yes,473,2.6,No
+38,https://www.zomato.com/bangalore/dominos-pizza-indiranagar,Domino's Pizza,Indiranagar,Quick Bites,"Rs 601-1,000",800,Yes,38,Yes,464,3.0,No
+39,https://www.zomato.com/bangalore/kabab-magic-marathahalli,Kabab Magic,Marathahalli,Casual Dining,Rs 301-600,500,Yes,9,Yes,459,3.0,No
+40,https://www.zomato.com/bangalore/dominos-pizza-brookefield,Domino's Pizza,Brookefield,Quick Bites,"Rs 601-1,000",800,Yes,38,Yes,458,3.0,No
+41,https://www.zomato.com/bangalore/abhiruchi-hotel-bannerghatta-road,Abhiruchi Hotel,Bannerghatta Road,Casual Dining,Rs 301-600,550,Yes,3,No,456,3.3,No
+42,https://www.zomato.com/bangalore/pizza-hut-1-hsr,Pizza Hut,HSR,Quick Bites,"Rs 601-1,000",750,Yes,37,Yes,452,3.1,No
+43,https://www.zomato.com/bangalore/the-dhaba-marathahalli,The Dhaba,Marathahalli,Casual Dining,"Rs 601-1,000",900,No,1,No,444,2.7,No
+44,https://www.zomato.com/bangalore/pizza-hut-kalyan-nagar-bangalore,Pizza Hut,Kalyan Nagar,Casual Dining,"Rs 601-1,000",750,Yes,37,Yes,442,2.7,No
+45,https://www.zomato.com/bangalore/wangs-kitchen-hsr,Wangs Kitchen,HSR,Casual Dining,"Rs 601-1,000",1000,Yes,9,Yes,438,2.4,No
+46,https://www.zomato.com/bangalore/woodys-commercial-street,Woody's,Commercial Street,Casual Dining,"Rs 601-1,000",650,No,3,No,434,2.5,No
+47,https://www.zomato.com/bangalore/melange-hotel-ekaa-electronic-city-bangalore,Melange - Hotel Ekaa,Electronic City,Casual Dining,"Rs 601-1,000",900,Yes,1,No,427,3.2,No
+48,https://www.zomato.com/bangalore/a2b-adyar-ananda-bhavan-bannerghatta-road,A2B - Adyar Ananda Bhavan,Bannerghatta Road,Casual Dining,Rs 301-600,400,Yes,23,Yes,426,2.7,No
+49,https://www.zomato.com/bangalore/bfc-family-restaurant-kaggadasapura,BFC Family Restaurant,Kaggadasapura,Casual Dining,Rs 301-600,600,Yes,1,No,426,3.2,No
+50,https://www.zomato.com/bangalore/sher-e-punjab-marathahalli-bangalore,Sher-E-Punjab,Marathahalli,Quick Bites,Rs 301-600,400,Yes,2,No,425,3.4,No
+51,https://www.zomato.com/bangalore/treatley-whitefield-bangalore,Treatley,Whitefield,Delivery,Rs 301-600,500,Yes,1,No,425,3.1,No
+52,https://www.zomato.com/bangalore/kfc-brookefield,KFC,Brookefield,Quick Bites,Rs 301-600,450,Yes,28,Yes,420,3.1,No
+53,https://www.zomato.com/bangalore/rahhams-airport-road,Rahhams,Old Airport Road,Casual Dining,"Rs 601-1,000",700,Yes,5,Yes,420,2.8,No
+54,https://www.zomato.com/bangalore/dominos-pizza-airport-road,Domino's Pizza,Old Airport Road,Quick Bites,Rs 301-600,400,Yes,38,Yes,413,2.8,No
+55,https://www.zomato.com/bangalore/golden-restaurant-hsr,Golden Restaurant,HSR,Casual Dining,"Rs 601-1,000",750,Yes,2,No,411,3.4,No
+56,https://www.zomato.com/bangalore/mamma-mexicana-mg-road,Mamma Mexicana,MG Road,Casual Dining,"Rs 601-1,000",1000,Yes,1,No,409,2.2,No
+57,https://www.zomato.com/bangalore/wyt-restropub-mg-road,WYT RestroPub,MG Road,Pub,"Rs 601-1,000",1000,No,1,No,409,2.6,No
+58,https://www.zomato.com/bangalore/cave-n-dine-basaveshwara-nagar,Cave N Dine,Basaveshwara Nagar,Casual Dining,"Rs 601-1,000",800,Yes,1,No,405,3.1,No
+59,https://www.zomato.com/bangalore/mcdonalds-brookefield,McDonald's,Brookefield,Quick Bites,Rs 301-600,500,Yes,24,Yes,404,3.0,No
+60,https://www.zomato.com/bangalore/fusion-lounge-brigade-road,Fusion Lounge,Brigade Road,Lounge,"Rs 1,000+",1500,No,1,No,402,2.0,No
+61,https://www.zomato.com/bangalore/homedeli-kitchen-1-jeevan-bhima-nagar-bangalore,HomeDeli Kitchen,Jeevan Bhima Nagar,,Rs 301-600,600,Yes,1,No,401,3.0,No
+62,https://www.zomato.com/bangalore/paratha-junction-jayanagar,Paratha Junction,Jayanagar,Quick Bites,Up to Rs 300,300,Yes,3,No,399,3.3,No
+63,https://www.zomato.com/bangalore/paisa-vasool-koramangala-7th-block,Paisa Vasool,Koramangala 7th Block,Quick Bites,Rs 301-600,400,Yes,2,No,396,3.3,No
+64,https://www.zomato.com/bangalore/kfc-sarjapur-road,KFC,Sarjapur Road,Quick Bites,Rs 301-600,450,Yes,28,Yes,393,3.2,No
+65,https://www.zomato.com/bangalore/new-punjabi-hotel-airport-road,New Punjabi Hotel,Old Airport Road,Quick Bites,Rs 301-600,400,Yes,3,No,393,3.2,No
+66,https://www.zomato.com/bangalore/ammis-biryani-bannerghatta-road,Ammi's Biryani,Bannerghatta Road,,Rs 301-600,500,No,8,Yes,392,2.4,No
+67,https://www.zomato.com/bangalore/wangs-kitchen-marathahalli,Wangs Kitchen,Marathahalli,Casual Dining,"Rs 601-1,000",1000,Yes,9,Yes,384,3.0,No
+68,https://www.zomato.com/bangalore/southern-spice-whitefield,Southern Spice,Whitefield,Casual Dining,"Rs 601-1,000",800,Yes,3,No,382,2.6,No
+69,https://www.zomato.com/bangalore/subway-hsr,Subway,HSR,Quick Bites,Rs 301-600,600,Yes,25,Yes,382,3.1,No
+70,https://www.zomato.com/bangalore/seasons-electronic-city,Seasons,Electronic City,Casual Dining,"Rs 601-1,000",1000,Yes,2,No,380,2.9,No
+71,https://www.zomato.com/bangalore/freshkhilao-brookefield,Freshkhilao,Brookefield,Casual Dining,"Rs 601-1,000",750,Yes,1,No,379,3.3,No
+72,https://www.zomato.com/bangalore/konaseema-grand-1-whitefield,Konaseema Grand,Whitefield,Casual Dining,"Rs 601-1,000",1000,Yes,1,No,379,3.2,No
+73,https://www.zomato.com/bangalore/soho-bar-grill-basavanagudi,Soho Bar & Grill,Basavanagudi,Pub,"Rs 1,000+",1100,No,1,No,377,2.7,No
+74,https://www.zomato.com/bangalore/dilli-darbar-1-whitefield,Dilli Darbar,Whitefield,Casual Dining,Rs 301-600,500,Yes,2,No,374,3.4,No
+75,https://www.zomato.com/bangalore/nandas-hsr,Nanda's,HSR,Casual Dining,Rs 301-600,450,Yes,3,No,362,2.9,No
+76,https://www.zomato.com/bangalore/punjabi-dhaba-ejipura,Punjabi Dhaba,Ejipura,Quick Bites,Rs 301-600,350,Yes,3,No,360,3.4,No
+77,https://www.zomato.com/bangalore/kfc-jayanagar,KFC,Jayanagar,Quick Bites,Rs 301-600,400,Yes,28,Yes,358,3.3,No
+78,https://www.zomato.com/bangalore/sri-durga-nellore-mess-banaswadi,Sri Durga Nellore Mess,Banaswadi,Mess,Rs 301-600,350,Yes,1,No,356,3.4,No
+79,https://www.zomato.com/bangalore/punjabi-food-corner-jp-nagar,Punjabi Food Corner,JP Nagar,Quick Bites,Rs 301-600,400,Yes,1,No,354,3.0,No
+80,https://www.zomato.com/bangalore/a2b-adyar-ananda-bhavan-1-electronic-city,A2B - Adyar Ananda Bhavan,Electronic City,Casual Dining,Rs 301-600,400,Yes,23,Yes,352,3.1,No
+81,https://www.zomato.com/bangalore/dominos-pizza-bannerghatta-road,Domino's Pizza,Bannerghatta Road,Quick Bites,Rs 301-600,400,Yes,38,Yes,348,3.0,No
+82,https://www.zomato.com/bangalore/the-bawarchi-marathahalli,The Bawarchi,Marathahalli,Casual Dining,"Rs 601-1,000",700,Yes,2,No,346,2.6,No
+83,https://www.zomato.com/bangalore/indian-food-btm-bangalore,Indian Food,BTM,Takeaway,Rs 301-600,450,Yes,2,No,345,2.9,No
+84,https://www.zomato.com/bangalore/kritunga-restaurant-sarjapur-road,Kritunga Restaurant,Sarjapur Road,Casual Dining,Rs 301-600,600,No,6,Yes,344,2.7,No
+85,https://www.zomato.com/bangalore/ammis-biryani-marathahalli,Ammi's Biryani,Marathahalli,Quick Bites,Rs 301-600,500,No,8,Yes,342,2.1,No
+86,https://www.zomato.com/bangalore/pizza-hut-malleshwaram,Pizza Hut,Malleshwaram,Casual Dining,"Rs 601-1,000",750,Yes,37,Yes,340,2.8,No
+87,https://www.zomato.com/bangalore/mast-kalandar-bellandur,Mast Kalandar,Bellandur,Casual Dining,Rs 301-600,450,No,8,Yes,338,2.1,No
+88,https://www.zomato.com/bangalore/kabab-treat-bannerghatta-road,Kabab Treat,Bannerghatta Road,Casual Dining,Rs 301-600,500,Yes,1,No,335,2.8,No
+89,https://www.zomato.com/bangalore/dakshin-biryani-tiffin-indiranagar-bangalore,Dakshin Biryani & Tiffin,Indiranagar,Casual Dining,Rs 301-600,550,Yes,1,No,334,3.4,No
+90,https://www.zomato.com/bangalore/kapoors-biriyani-btm-bangalore,Kapoor's Biriyani,BTM,Quick Bites,Rs 301-600,400,Yes,1,No,334,3.3,No
+91,https://www.zomato.com/bangalore/dominos-pizza-sarjapur-road,Domino's Pizza,Sarjapur Road,Quick Bites,Rs 301-600,400,Yes,38,Yes,332,2.7,No
+92,https://www.zomato.com/bangalore/gurukrupa-paratha-house-domlur,Gurukrupa Paratha House,Domlur,Casual Dining,Rs 301-600,500,Yes,2,No,332,3.1,No
+93,https://www.zomato.com/bangalore/crunch-pizzas-domlur,Crunch Pizzas,Domlur,Delivery,Rs 301-600,600,Yes,12,Yes,331,2.9,No
+94,https://www.zomato.com/bangalore/the-paramount-hotel-domlur-bangalore,The Paramount Hotel,Domlur,Casual Dining,"Rs 601-1,000",1000,Yes,2,No,326,2.9,No
+95,https://www.zomato.com/bangalore/dakshin-sagar-hsr-bangalore,Dakshin Sagar,HSR,Quick Bites,Rs 301-600,400,Yes,1,No,325,3.1,No
+96,https://www.zomato.com/bangalore/grills-rolls-jp-nagar-bangalore,Grills & Rolls,JP Nagar,Quick Bites,Rs 301-600,400,Yes,1,No,321,2.5,No
+97,https://www.zomato.com/bangalore/kabab-magic-sarjapur-road,Kabab Magic,Sarjapur Road,Quick Bites,Rs 301-600,500,Yes,9,Yes,321,3.0,No
+98,https://www.zomato.com/bangalore/rangla-punjab-bellandur,Rangla Punjab,Bellandur,Quick Bites,Rs 301-600,450,Yes,1,No,321,2.9,No
+99,https://www.zomato.com/bangalore/zeeshan-jp-nagar,Zeeshan,JP Nagar,Casual Dining,"Rs 601-1,000",700,Yes,5,Yes,320,3.1,No
+100,https://www.zomato.com/bangalore/lazeez-koramangala-1st-block,Lazeez,Koramangala 1st Block,Casual Dining,Rs 301-600,600,Yes,3,No,318,2.4,No
+101,https://www.zomato.com/bangalore/vasudev-adigas-indiranagar,Vasudev Adiga's,Indiranagar,Casual Dining,Rs 301-600,400,No,10,Yes,317,3.0,No
+102,https://www.zomato.com/bangalore/food-zone-marathahalli,Food Zone,Marathahalli,Quick Bites,Up to Rs 300,300,Yes,2,No,313,3.4,No
+103,https://www.zomato.com/bangalore/rahhams-shanti-nagar,Rahhams,Shanti Nagar,Casual Dining,"Rs 601-1,000",700,Yes,5,Yes,313,2.6,No
+104,https://www.zomato.com/bangalore/pizza-hut-marathahalli,Pizza Hut,Marathahalli,Quick Bites,"Rs 601-1,000",750,Yes,37,Yes,310,2.2,No
+105,https://www.zomato.com/bangalore/hyderabad-biryaani-palace-kammanahalli,Hyderabad Biryaani Palace,Kammanahalli,Casual Dining,"Rs 601-1,000",750,Yes,3,No,309,3.4,No
+106,https://www.zomato.com/bangalore/anjappar-hsr,Anjappar,HSR,Casual Dining,"Rs 601-1,000",650,No,4,No,304,2.9,No
+107,https://www.zomato.com/bangalore/dominos-pizza-3-whitefield,Domino's Pizza,"ITPL Main Road, Whitefield",Quick Bites,Rs 301-600,400,Yes,38,Yes,304,3.0,No
+108,https://www.zomato.com/bangalore/shaadi-ki-biryani-commercial-street,Shaadi Ki Biryani,Commercial Street,Casual Dining,Rs 301-600,500,Yes,5,Yes,303,2.8,No
+109,https://www.zomato.com/bangalore/pizza-hut-frazer-town,Pizza Hut,Frazer Town,Casual Dining,"Rs 601-1,000",750,Yes,37,Yes,302,3.3,No
+110,https://www.zomato.com/bangalore/vasudev-adigas-mg-road,Vasudev Adiga's,MG Road,Quick Bites,Up to Rs 300,250,No,10,Yes,301,2.5,No
+111,https://www.zomato.com/bangalore/biryani-junction-bommanahalli-bangalore,Biryani Junction,Bommanahalli,Quick Bites,Rs 301-600,450,Yes,2,No,298,2.3,Yes
+112,https://www.zomato.com/bangalore/biryani-junction-btm,Biryani Junction,Bommanahalli,Quick Bites,Rs 301-600,450,Yes,2,No,298,2.3,Yes
+113,https://www.zomato.com/bangalore/pot-biryani-electronic-city,Pot Biryani,Electronic City,Quick Bites,Rs 301-600,600,Yes,5,Yes,297,2.8,No
+114,https://www.zomato.com/bangalore/thiruvithamkoor-restaurant-sarjapur-road,Thiruvithamkoor Restaurant,Sarjapur Road,Quick Bites,Rs 301-600,400,Yes,1,No,296,3.3,No
+115,https://www.zomato.com/bangalore/night-food-joint-marathahalli,Night Food Joint,Marathahalli,Delivery,Rs 301-600,500,Yes,3,No,295,2.8,No
+116,https://www.zomato.com/bangalore/howrah-bridge-hsr,Howrah Bridge,HSR,Casual Dining,Rs 301-600,600,Yes,1,No,294,3.2,No
+117,https://www.zomato.com/bangalore/beijing-bites-jeevan-bhima-nagar,Beijing Bites,Jeevan Bhima Nagar,Casual Dining,"Rs 601-1,000",850,Yes,25,Yes,292,3.2,No
+118,https://www.zomato.com/bangalore/dominos-pizza-koramangala-4th-block,Domino's Pizza,Koramangala 4th Block,Quick Bites,Rs 301-600,400,Yes,38,Yes,291,3.0,No
+119,https://www.zomato.com/bangalore/hatti-punjab-di-electronic-city-bangalore,Hatti Punjab Di,Electronic City,Casual Dining,Rs 301-600,550,Yes,7,Yes,291,3.0,No
+120,https://www.zomato.com/bangalore/vasudev-adigas-bannerghatta-road,Vasudev Adiga's,Bannerghatta Road,Casual Dining,Up to Rs 300,250,No,10,Yes,291,2.3,No
+121,https://www.zomato.com/bangalore/vasudev-adigas-koramangala-4th-block,Vasudev Adiga's,Koramangala 4th Block,Casual Dining,Up to Rs 300,250,No,10,Yes,291,2.9,No
+122,https://www.zomato.com/bangalore/chungs-chinese-corner-indiranagar,Chung's Chinese Corner,Indiranagar,Casual Dining,Rs 301-600,600,Yes,5,Yes,290,2.7,No
+123,https://www.zomato.com/bangalore/tandoori-knight-banashankari,Tandoori Knight,Banashankari,Quick Bites,Rs 301-600,450,Yes,1,No,290,3.0,No
+124,https://www.zomato.com/bangalore/gustos-pizza-bellandur-bangalore,Gusto's Pizza,Bellandur,Casual Dining,Rs 301-600,500,Yes,2,No,289,3.0,No
+125,https://www.zomato.com/bangalore/dominos-pizza-4-electronic-city,Domino's Pizza,Electronic City,Quick Bites,Rs 301-600,400,Yes,38,Yes,284,3.2,No
+126,https://www.zomato.com/bangalore/kabab-magic-hsr,Kabab Magic,HSR,Quick Bites,Rs 301-600,500,Yes,9,Yes,283,3.1,No
+127,https://www.zomato.com/bangalore/nandhini-deluxe-banashankari,Nandhini Deluxe,Banashankari,Casual Dining,Rs 301-600,600,No,10,Yes,283,2.6,No
+128,https://www.zomato.com/bangalore/laddoos-btm,Laddoos,BTM,Quick Bites,Up to Rs 300,200,Yes,5,Yes,280,3.4,No
+129,https://www.zomato.com/bangalore/pure-punjabi-electronic-city,Pure Punjabi,Electronic City,Quick Bites,Rs 301-600,450,Yes,1,No,275,3.4,No
+130,https://www.zomato.com/bangalore/ny-pizza-waffles-electronic-city-bangalore,NY Pizza & Waffles,Electronic City,Quick Bites,Rs 301-600,400,Yes,1,No,273,3.1,No
+131,https://www.zomato.com/bangalore/sherlocks-pub-brookefield,Sherlock's Pub,Brookefield,Pub,"Rs 1,000+",1500,Yes,6,Yes,273,3.3,No
+132,https://www.zomato.com/bangalore/kaayal-brookefield,Kaayal,Brookefield,Casual Dining,Rs 301-600,500,Yes,2,No,270,3.2,No
+133,https://www.zomato.com/bangalore/punjabi-tadka-bellandur,Punjabi Tadka,Bellandur,Casual Dining,Rs 301-600,400,No,6,Yes,270,2.6,No
+134,https://www.zomato.com/bangalore/sbarro-1-malleshwaram,Sbarro,Malleshwaram,Food Court,Rs 301-600,500,No,4,No,270,2.8,No
+135,https://www.zomato.com/bangalore/hotel-junior-kuppanna-hsr,Hotel Junior Kuppanna,HSR,Casual Dining,Rs 301-600,550,Yes,1,No,269,3.1,No
+136,https://www.zomato.com/bangalore/nandhini-deluxe-whitefield,Nandhini Deluxe,Whitefield,Casual Dining,Rs 301-600,600,No,10,Yes,268,2.9,No
+137,https://www.zomato.com/bangalore/folklore-restaurant-sarjapur-road,Folklore Restaurant,Sarjapur Road,Casual Dining,Rs 301-600,450,Yes,1,No,263,3.2,No
+138,https://www.zomato.com/bangalore/kfc-frazer-town,KFC,Frazer Town,Quick Bites,Rs 301-600,400,Yes,28,Yes,263,3.3,No
+139,https://www.zomato.com/bangalore/sbarro-whitefield,Sbarro,Whitefield,Food Court,Rs 301-600,500,Yes,4,No,263,2.7,No
+140,https://www.zomato.com/bangalore/sri-lakshmi-dhaba-btm-bangalore,Sri Lakshmi Dhaba,BTM,Quick Bites,Up to Rs 300,250,Yes,2,No,262,3.0,No
+141,https://www.zomato.com/bangalore/wazirs-shanti-nagar,Wazir's,Shanti Nagar,Casual Dining,Rs 301-600,500,Yes,1,No,262,3.3,No
+142,https://www.zomato.com/bangalore/kuttanadu-1-hsr,Kuttanadu,HSR,Casual Dining,"Rs 601-1,000",700,Yes,1,No,261,2.8,No
+143,https://www.zomato.com/bangalore/subway-indiranagar,Subway,Indiranagar,Quick Bites,Rs 301-600,500,Yes,25,Yes,261,2.4,No
+144,https://www.zomato.com/bangalore/bhagini-marathahalli,Bhagini,Marathahalli,Casual Dining,"Rs 601-1,000",800,No,4,No,259,2.0,No
+145,https://www.zomato.com/bangalore/chakh-le-foods-jeevan-bhima-nagar-bangalore,Chakh Le Foods,Jeevan Bhima Nagar,Casual Dining,Rs 301-600,500,Yes,1,No,258,3.4,No
+146,https://www.zomato.com/bangalore/hotel-feast-ambur-biriyani-koramangala-1st-block,Hotel Feast Ambur Biriyani,Koramangala 1st Block,Quick Bites,Up to Rs 300,250,Yes,1,No,257,3.4,No
+147,https://www.zomato.com/bangalore/mast-kalandar-indiranagar,Mast Kalandar,Indiranagar,Casual Dining,Rs 301-600,450,No,8,Yes,256,2.4,No
+148,https://www.zomato.com/bangalore/the-bawarchi-banaswadi,The Bawarchi,Banaswadi,Casual Dining,"Rs 1,000+",1050,Yes,2,No,256,2.5,No
+149,https://www.zomato.com/bangalore/dandes-hyderabad-biryani-bommanahalli,Dande's Hyderabad Biryani,Bommanahalli,Casual Dining,Rs 301-600,550,Yes,2,No,255,3.0,No
+150,https://www.zomato.com/bangalore/mint-masala-infantry-road,Mint Masala,Infantry Road,Casual Dining,"Rs 601-1,000",1000,No,2,No,255,2.8,No
+151,https://www.zomato.com/bangalore/kaayal-jeevan-bhima-nagar,Kaayal,Jeevan Bhima Nagar,Casual Dining,Rs 301-600,500,Yes,2,No,254,3.2,No
+152,https://www.zomato.com/bangalore/midnight-hunger-solutions-24-7-indiranagar-bangalore,Midnight Hunger Solutions 24/7,Indiranagar,Delivery,Rs 301-600,500,Yes,3,No,254,2.1,No
+153,https://www.zomato.com/bangalore/punjabi-dawat-bellandur-bangalore,Punjabi Dawat,Bellandur,Quick Bites,Rs 301-600,400,Yes,1,No,254,2.9,No
+154,https://www.zomato.com/bangalore/aashirvaad-restaurant-marathahalli,Aashirvaad Restaurant,Marathahalli,Quick Bites,Up to Rs 300,300,Yes,1,No,253,3.1,No
+155,https://www.zomato.com/bangalore/radha-rani-brookefield,Radha Rani,Brookefield,Quick Bites,Rs 301-600,400,Yes,1,No,252,3.4,No
+156,https://www.zomato.com/bangalore/a2b-adyar-ananda-bhavan-koramangala-7th-block,A2B - Adyar Ananda Bhavan,Koramangala 7th Block,Casual Dining,Rs 301-600,400,Yes,23,Yes,249,2.7,No
+157,https://www.zomato.com/bangalore/dragons-kitchen-1-hsr,Dragon's Kitchen,HSR,Casual Dining,Rs 301-600,500,Yes,1,No,248,3.1,No
+158,https://www.zomato.com/bangalore/dal-tadkaa-banashankari,Dal Tadkaa,Banashankari,Casual Dining,Rs 301-600,500,Yes,1,No,247,2.5,No
+159,https://www.zomato.com/bangalore/kitchens@hsr-hsr-bangalore,Kitchens@HSR,HSR,Takeaway,Up to Rs 300,200,Yes,1,No,247,3.1,No
+160,https://www.zomato.com/bangalore/kfc-3-whitefield,KFC,"ITPL Main Road, Whitefield",Food Court,Rs 301-600,400,Yes,28,Yes,246,2.8,No
+161,https://www.zomato.com/bangalore/tasty-bytes-kumaraswamy-layout,Tasty Bytes,Kumaraswamy Layout,Quick Bites,Up to Rs 300,300,Yes,1,No,245,3.1,No
+162,https://www.zomato.com/bangalore/pans-aroma-electronic-city,Pan's Aroma,Electronic City,Quick Bites,Rs 301-600,400,Yes,2,No,244,2.9,No
+163,https://www.zomato.com/bangalore/deckers-lane-marathahalli,Decker's Lane,Marathahalli,Quick Bites,Rs 301-600,400,Yes,1,No,243,2.1,No
+164,https://www.zomato.com/bangalore/desi-khana-varthur-main-road-whitefield,Desi Khana,"Varthur Main Road, Whitefield",Quick Bites,Up to Rs 300,300,Yes,2,No,243,3.4,No
+165,https://www.zomato.com/bangalore/kabab-mandra-sarjapur-road,Kabab Mandra,Sarjapur Road,Quick Bites,Up to Rs 300,300,Yes,2,No,243,2.9,No
