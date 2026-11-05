@@ -20,6 +20,7 @@ The project's main finding is about the data itself. **The dataset has 51,717 ro
 ## Contents
 
 - [Key findings](#key-findings)
+- [Case study: Popular isn't loved](#case-study-popular-isnt-loved)
 - [Workflow](#workflow)
 - [Repository structure](#repository-structure)
 - [Data](#data)
@@ -41,6 +42,14 @@ The project's main finding is about the data itself. **The dataset has 51,717 ro
 | 4 | **Online-ordering adoption ranges from 44% to 64%** across the 12 localities with 300+ restaurants. HSR leads at 63.9% and Electronic City trails at 44.0%. | [A08](results/a08_cuisine_diversity_and_online_adoption.csv) |
 | 5 | **Indiranagar is a delivery opportunity.** It is the best-rated large locality (3.79), yet 48% of its restaurants don't take online orders. | [A04](results/a04_high_rating_low_online_adoption.csv) |
 | 6 | **Specialty cuisines get the highest ratings, staple cuisines have the most restaurants.** North Indian is served by 40% of restaurants and is the #1 cuisine in all 12 large localities. European (4.19), Asian (4.07) and BBQ (4.01) have the highest ratings. | [A05](results/a05_top_cuisines_by_presence.csv) · [A06](results/a06_top_rated_cuisines.csv) |
+
+## Case study: Popular isn't loved
+
+<a href="case-studies/01-popular-isnt-loved"><img src="case-studies/01-popular-isnt-loved/assets/dashboard.png" alt="Popular isn't loved dashboard" width="100%"></a>
+
+**165 of the city's 1,942 most-voted restaurants are rated below 3.5.** Compared with well-rated peers they are more likely to take online orders (84.2% vs 66.2%), to be chain outlets (43.6% vs 24.8%) and to be priced ₹301–600 for two (64.2% vs 30.7%). 42 of them are outlets of chains whose other outlets rate well, so the fix is outlet execution, not the brand.
+
+→ [Read the case study](case-studies/01-popular-isnt-loved) · queries C01–C04, a priority list of the 165 outlets, and an interactive dashboard.
 
 ## Workflow
 
@@ -68,6 +77,8 @@ zomato-bangalore-sql-analysis/
 │   ├── 02_cleaning/        # Cleaning preview + CREATE TABLE restaurants_clean
 │   ├── 03_validation/      # Clean-table checks + restaurant-grain reconciliation
 │   └── 04_analysis/        # A01–A08 business questions (restaurant grain)
+├── case-studies/
+│   └── 01-popular-isnt-loved/  # Business case: popular, low-rated restaurants (SQL C01–C04, results, dashboard)
 ├── results/                # Query outputs captured from BigQuery (CSV)
 ├── docs/
 │   ├── data_dictionary.md          # Raw, cleaned and derived fields
