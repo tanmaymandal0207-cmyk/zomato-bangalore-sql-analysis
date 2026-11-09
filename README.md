@@ -6,7 +6,7 @@
   <img src="https://img.shields.io/badge/Google%20BigQuery-Standard%20SQL-4285F4?logo=googlebigquery&logoColor=white" alt="BigQuery">
   <img src="https://img.shields.io/badge/Records-51%2C717-555" alt="Records">
   <img src="https://img.shields.io/badge/Restaurants-12%2C453-e8743b" alt="Restaurants">
-  <img src="https://img.shields.io/badge/Status-Analysis%20in%20progress-2ea44f" alt="Status">
+  <img src="https://img.shields.io/badge/Status-Complete-2ea44f" alt="Status">
 </p>
 
 # Zomato Bangalore — SQL Data Quality & Restaurant Market Analysis
