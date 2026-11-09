@@ -1,0 +1,4 @@
+# Language bar: show the project as SQL
+*.sql linguist-language=SQL
+# Case-study dashboard is a presentation layer, not the analysis
+*.html linguist-detectable=false
