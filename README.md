@@ -29,6 +29,8 @@ The project's main finding is about the data itself. **The dataset has 51,717 ro
 - [Selected results](#selected-results)
 - [How to reproduce](#how-to-reproduce)
 - [Limitations & next steps](#limitations--next-steps)
+- [Changelog](#changelog)
+- [Related projects](#related-projects)
 
 ---
 
@@ -71,6 +73,7 @@ flowchart LR
 
 ```
 zomato-bangalore-sql-analysis/
+├── CHANGELOG.md            # release and maintenance history
 ├── sql/
 │   ├── 00_source/          # Original BigQuery console scripts, verbatim (audit trail)
 │   ├── 01_profiling/       # 13 column-level profiling scripts (00–12)
@@ -179,6 +182,16 @@ Each query began as a practice attempt. The originals are kept verbatim in [`sql
 - **Snapshot choice:** when a restaurant's rating differs between listings, the highest-vote snapshot is used. This is a documented assumption; the scrape has no timestamp.
 - **A04 threshold:** the spec's 3.8 cut-off returns no localities at restaurant grain, so 3.7 is applied and the reason is documented in the query.
 - **Next:** price-band analysis on `approx_cost_cleaned`, splitting `rest_type` into single types, `book_table` vs rating, and a Looker Studio dashboard over the results.
+
+## Changelog
+
+Release notes are in [CHANGELOG.md](CHANGELOG.md) (current release: v1.1, 5 Nov 2026).
+
+## Related projects
+
+- [SQL Business Problems](https://github.com/tanmaymandal0207-cmyk/sql-business-problems): problem → SQL → validation case studies in BigQuery
+- [IPL Match Intelligence](https://github.com/tanmaymandal0207-cmyk/IPL-Match-Intelligence-Player-Impact-Analysis): MySQL pipeline with data-quality checks and a live dashboard
+- [Inventory Reconciliation](https://github.com/tanmaymandal0207-cmyk/inventory-reconciliation): row-level reconciliation of 11 years of challans with an audit register
 
 ---
 

@@ -23,3 +23,4 @@ First release as a standalone repo (moved out of `sql-business-problems`).
 - 9 Nov 2026: `.gitattributes` for SQL and HTML files; README status marked complete.
 - 14 Nov 2026: README restored and stray `solution.sql` removed after an unrelated upload on 12 Nov overwrote them.
 - 15 Nov 2026: added this changelog.
+- 16 Nov 2026: README links the changelog and related projects; repository tree lists `CHANGELOG.md`.
