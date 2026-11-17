@@ -3,6 +3,7 @@
 ## v1.1 — 5 Nov 2026
 
 ### Added
+
 - Case study 01, *Popular isn't loved*: SQL C01–C04, results (KPI benchmark, price × format, chain brands, priority list), README and dashboard screenshot.
 
 ## v1.0 — 4 Nov 2026
@@ -10,6 +11,7 @@
 First release as a standalone repo (moved out of `sql-business-problems`).
 
 ### Added
+
 - Original BigQuery console scripts, kept verbatim in `sql/00_source/` for traceability.
 - Column-level profiling scripts `00`–`12`.
 - Cleaning layer: preview and `CREATE restaurants_clean`.
@@ -24,3 +26,4 @@ First release as a standalone repo (moved out of `sql-business-problems`).
 - 14 Nov 2026: README restored and stray `solution.sql` removed after an unrelated upload on 12 Nov overwrote them.
 - 15 Nov 2026: added this changelog.
 - 16 Nov 2026: README links the changelog and related projects; repository tree lists `CHANGELOG.md`.
+- 17 Nov 2026: Markdown formatting pass (markdownlint): code fences tagged with a language, blank lines around headings and lists. No content changes.

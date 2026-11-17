@@ -71,7 +71,7 @@ flowchart LR
 
 ## Repository structure
 
-```
+```text
 zomato-bangalore-sql-analysis/
 ├── CHANGELOG.md            # release and maintenance history
 ├── sql/
