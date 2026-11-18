@@ -25,6 +25,7 @@ Validation: [`03_validation/02_restaurant_grain_checks.sql`](../sql/03_validatio
 | A06 | Top-rated cuisines (≥100 restaurants) | Grouped by restaurant **name** + cuisine; `HAVING ≥ 70` instead of 100 | Group by cuisine; `HAVING COUNT(*) >= 100` |
 | A07 | Locality × cuisine rating (extension) | Online % mixed `COUNTIF` over rows with `COUNT(DISTINCT url)`; unnested alias `cuisines` vs selected `Cuisines` | Clean CTEs; online % within the locality–cuisine pair |
 | A08 | Cuisine diversity & online adoption | ≥20-outlet cuisine filter and *most popular cuisine* not implemented; threshold 100 vs 300; sorted by outlets, not acceptance % | All requirements implemented; `ARRAY_AGG(... ORDER BY ... LIMIT 1)` for the top cuisine |
+| A09 | Pareto: restaurants holding 80% of votes, by locality | Original Q9 (written in the console, not in `00_source`) summed `votes_cleaned` over listing rows, so each restaurant's votes were counted ~4× (14,671,985 votes vs 2,286,732); grouped by `name, location`, merging a chain's outlets in a locality; `HAVING Votes > 0` dropped zero-vote restaurants; labelled rows `Top 80%` / `Remaining 20%` but never reported the share of **restaurants** behind 80% of votes. Its crossing rule `cum_votes - votes < 0.8 * total` was correct | Restaurant grain; zero-vote restaurants kept; ties by `restaurant_id`; reports restaurants for 80%, top-20% share and Gini; crossing rule kept |
 
 ## Conventions applied in corrected queries
 
@@ -33,4 +34,5 @@ Validation: [`03_validation/02_restaurant_grain_checks.sql`](../sql/03_validatio
 - `SAFE_DIVIDE` for every ratio; `ROUND` applied after the multiplication.
 - Deterministic ordering (secondary sort key) on every `LIMIT`.
 - Header block: business question → requirements → grain & rules → original line range → result file.
-- Executed in BigQuery on 2026-11-03; outputs saved to [`results/`](../results).
+- A01–A08 executed in BigQuery on 2026-11-03, A09–A12 on 2026-11-18; outputs saved to [`results/`](../results).
+- A10–A12 had no practice attempt; they were written directly at restaurant grain.

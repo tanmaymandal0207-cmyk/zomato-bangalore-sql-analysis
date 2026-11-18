@@ -56,3 +56,7 @@ Original columns are retained next to every cleaned column for traceability.
 | `rating` | `SAFE_CAST(SPLIT(rate_cleaned, '/')[SAFE_OFFSET(0)] AS FLOAT64)` | `NEW`, `-` and NULL → NULL; valid range observed 1.8–4.9 |
 | Deduplication | `QUALIFY ROW_NUMBER() OVER (PARTITION BY restaurant_id ORDER BY votes_cleaned DESC, url) = 1` | Keeps the snapshot with the most votes; `url` makes the pick deterministic |
 | `cuisine` | `TRIM(cuisine_raw)` from `UNNEST(SPLIT(cuisines, ','))` | Exploded in the `restaurant_cuisines` CTE, `SELECT DISTINCT` per restaurant |
+| `price_band` | `approx_cost_cleaned`: ≤ 300 · 301–600 · 601–1,000 · 1,000+ | NULL cost → no band (A10, A11, case study 01) |
+| `format` | `TRIM(REGEXP_EXTRACT(rest_type, r'^[^,]+'))` | First value of the multi-valued `rest_type` (A12, case study 01) |
+| Chain flag | `COUNT(*) OVER (PARTITION BY name) >= 5` | Exact-name match across all 12,453 restaurants (A12, case study 01) |
+| `demand_index` | cell votes per restaurant ÷ (locality votes per restaurant × band votes per restaurant ÷ city votes per restaurant) | 1.0 = as expected for that locality and price band (A11) |
