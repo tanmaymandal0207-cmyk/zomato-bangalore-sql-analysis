@@ -1,0 +1,55 @@
+scope,restaurants,zero_vote_restaurants,total_votes,restaurants_for_80_pct,pct_restaurants_for_80,top20_vote_share_pct,gini,verdict
+ALL BANGALORE,12453,3007,2286732,1840,14.8,86.1,0.824,More concentrated than 80/20
+Sarjapur Road,338,77,67541,35,10.4,90.0,0.868,More concentrated than 80/20
+Marathahalli,683,172,137253,79,11.6,89.5,0.855,More concentrated than 80/20
+Brigade Road,131,20,39638,16,12.2,89.8,0.837,More concentrated than 80/20
+Whitefield,885,255,149384,114,12.9,88.3,0.839,More concentrated than 80/20
+Shivajinagar,59,27,1671,8,13.6,88.7,0.826,More concentrated than 80/20
+Ejipura,65,31,1908,9,13.8,87.3,0.842,More concentrated than 80/20
+Bommanahalli,98,44,2974,14,14.3,88.4,0.827,More concentrated than 80/20
+JP Nagar,523,144,89698,76,14.5,86.6,0.825,More concentrated than 80/20
+Koramangala 1st Block,165,52,25298,24,14.5,87.8,0.836,More concentrated than 80/20
+Shanti Nagar,75,26,6704,11,14.7,88.1,0.829,More concentrated than 80/20
+Electronic City,730,272,55384,110,15.1,86.5,0.818,More concentrated than 80/20
+Domlur,100,24,12434,16,16.0,84.9,0.806,More concentrated than 80/20
+BTM,724,190,71519,117,16.2,84.5,0.806,More concentrated than 80/20
+Rajajinagar,234,57,26404,39,16.7,84.3,0.793,More concentrated than 80/20
+New BEL Road,308,88,52434,52,16.9,84.6,0.806,More concentrated than 80/20
+Old Airport Road,141,31,26942,24,17.0,84.7,0.814,More concentrated than 80/20
+Koramangala 4th Block,129,28,60865,22,17.1,84.2,0.808,More concentrated than 80/20
+Bellandur,360,89,39267,62,17.2,83.7,0.799,More concentrated than 80/20
+Kammanahalli,179,50,23332,31,17.3,83.5,0.808,More concentrated than 80/20
+Bannerghatta Road,474,120,52338,83,17.5,83.3,0.8,More concentrated than 80/20
+HSR,703,176,114745,129,18.3,82.1,0.788,More concentrated than 80/20
+Frazer Town,192,46,22124,36,18.8,81.9,0.785,More concentrated than 80/20
+Basavanagudi,211,31,33527,40,19.0,81.9,0.785,More concentrated than 80/20
+Indiranagar,522,82,257459,99,19.0,81.8,0.777,More concentrated than 80/20
+Ulsoor,115,25,16013,22,19.1,81.3,0.772,More concentrated than 80/20
+Koramangala 5th Block,265,23,179224,51,19.2,81.1,0.77,More concentrated than 80/20
+RT Nagar,52,12,5254,10,19.2,82.3,0.8,More concentrated than 80/20
+Malleshwaram,237,33,61748,46,19.4,81.2,0.776,More concentrated than 80/20
+Thippasandra,72,22,4063,14,19.4,82.3,0.771,More concentrated than 80/20
+Koramangala 7th Block,145,15,45042,29,20.0,80.6,0.774,Flatter than 80/20
+Banashankari,294,67,38565,59,20.1,80.0,0.76,Flatter than 80/20
+Vasanth Nagar,54,11,7358,11,20.4,81.2,0.769,Flatter than 80/20
+Richmond Road,88,26,12574,18,20.5,81.0,0.779,Flatter than 80/20
+Koramangala 6th Block,150,16,45261,32,21.3,77.9,0.75,Flatter than 80/20
+MG Road,92,12,34873,20,21.7,79.5,0.751,Flatter than 80/20
+Residency Road,82,9,29083,18,22.0,79.7,0.752,Flatter than 80/20
+Jayanagar,365,57,87262,81,22.2,77.7,0.747,Flatter than 80/20
+Majestic,84,22,2456,19,22.6,78.4,0.734,Flatter than 80/20
+Brookefield,176,33,29180,40,22.7,77.2,0.739,Flatter than 80/20
+Basaveshwara Nagar,105,38,7108,24,22.9,77.8,0.753,Flatter than 80/20
+Kalyan Nagar,240,48,42280,59,24.6,74.3,0.725,Flatter than 80/20
+Banaswadi,209,61,10852,52,24.9,73.4,0.718,Flatter than 80/20
+Vijay Nagar,58,8,6103,15,25.9,72.9,0.704,Flatter than 80/20
+Nagawara,104,18,10193,27,26.0,73.2,0.693,Flatter than 80/20
+Wilson Garden,50,17,1142,13,26.0,73.8,0.726,Flatter than 80/20
+Seshadripuram,58,12,6379,16,27.6,70.8,0.677,Flatter than 80/20
+Hennur,65,17,2948,18,27.7,71.9,0.703,Flatter than 80/20
+Church Street,56,2,49074,16,28.6,72.8,0.682,Flatter than 80/20
+Kumaraswamy Layout,84,18,6636,24,28.6,68.2,0.673,Flatter than 80/20
+Lavelle Road,55,4,42710,18,32.7,63.8,0.627,Flatter than 80/20
+Kaggadasapura,58,8,4746,19,32.8,68.0,0.643,Flatter than 80/20
+Yeshwantpur,69,5,3678,26,37.7,61.6,0.574,Flatter than 80/20
+Jeevan Bhima Nagar,78,6,12714,30,38.5,58.1,0.581,Flatter than 80/20

@@ -1,0 +1,16 @@
+location,price_band,restaurants,pct_of_locality_restaurants,votes,votes_per_restaurant,expected_votes_per_restaurant,demand_index,top_restaurant_vote_share_pct,avg_rating,locality_avg_rating
+Basavanagudi,Up to Rs 300,134,63.5,17973,134.1,39.3,3.41,24.8,3.66,3.68
+Malleshwaram,Up to Rs 300,121,51.1,17452,144.2,64.5,2.24,25.3,3.74,3.73
+Banashankari,Rs 301-600,90,30.6,15561,172.9,90.8,1.91,16.7,3.63,3.62
+Basavanagudi,Rs 301-600,54,25.6,11196,207.3,109.9,1.89,15.7,3.77,3.68
+Sarjapur Road,"Rs 1,000+",22,6.5,45808,2082.2,1121.5,1.86,36.7,4.25,3.6
+Banaswadi,Up to Rs 300,99,47.4,2328,23.5,12.9,1.83,12.9,3.43,3.48
+Frazer Town,"Rs 601-1,000",27,14.1,11550,427.8,238.0,1.8,25.2,3.8,3.63
+Banaswadi,Rs 301-600,88,42.1,5654,64.3,35.9,1.79,6.5,3.52,3.48
+Nagawara,Rs 301-600,54,51.9,6536,121.0,67.8,1.78,9.5,3.54,3.5
+Koramangala 1st Block,Up to Rs 300,69,41.8,4634,67.2,38.0,1.77,20.3,3.6,3.65
+Basaveshwara Nagar,Rs 301-600,40,38.1,3226,80.7,46.8,1.72,12.6,3.61,3.6
+BTM,Rs 301-600,277,38.3,32020,115.6,68.3,1.69,3.9,3.55,3.57
+Banashankari,Up to Rs 300,160,54.4,8337,52.1,32.5,1.6,8.8,3.59,3.62
+Marathahalli,"Rs 1,000+",37,5.4,65747,1776.9,1127.8,1.58,18.4,4.17,3.53
+Brookefield,"Rs 601-1,000",21,11.9,10661,507.7,342.4,1.48,21.4,3.6,3.57

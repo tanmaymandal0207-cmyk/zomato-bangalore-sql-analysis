@@ -1,0 +1,17 @@
+format,segment,restaurants,rated_restaurants,avg_rating,pct_rated_4_plus,median_votes,pct_online,avg_cost_for_two
+All restaurants,Chain (5+ outlets),2542,2070,3.63,25.3,47.0,70.3,460.0
+All restaurants,Independent,9911,7361,3.62,22.0,21.0,47.2,494.0
+Bakery,Chain (5+ outlets),149,113,3.47,11.5,23.0,63.8,443.0
+Bakery,Independent,301,187,3.62,18.2,9.0,32.2,348.0
+Cafe,Chain (5+ outlets),111,104,3.59,26.0,36.0,46.8,706.0
+Cafe,Independent,502,448,3.81,43.1,76.0,52.4,598.0
+Casual Dining,Chain (5+ outlets),344,335,3.7,37.9,428.0,70.3,773.0
+Casual Dining,Independent,2066,1887,3.72,32.6,115.0,56.5,797.0
+Delivery,Chain (5+ outlets),371,221,3.62,29.0,9.0,78.4,490.0
+Delivery,Independent,555,320,3.5,11.9,8.0,47.0,400.0
+Dessert Parlor,Chain (5+ outlets),277,247,3.85,42.1,60.0,69.7,339.0
+Dessert Parlor,Independent,362,279,3.78,33.3,22.5,47.8,324.0
+Quick Bites,Chain (5+ outlets),751,641,3.53,15.3,65.0,68.6,369.0
+Quick Bites,Independent,4382,2988,3.52,10.5,11.0,46.2,302.0
+Takeaway,Chain (5+ outlets),218,144,3.69,27.1,11.5,75.7,394.0
+Takeaway,Independent,571,323,3.44,5.6,6.0,52.2,371.0
