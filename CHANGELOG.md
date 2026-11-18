@@ -1,5 +1,22 @@
 # Changelog
 
+## v1.2 — 18 Nov 2026
+
+### Added
+
+- A09 Pareto test by locality: 14.8% of restaurants hold 80% of votes city-wide; 29 of 53 localities (50+ restaurants) beat 80/20.
+- A10 Table booking vs rating: +0.54 overall, +0.36 with price held constant.
+- A11 Supply gaps: locality × price band cells with more votes per restaurant than expected.
+- A12 Chains vs independents, overall and by format.
+- Results for A09–A12, run in BigQuery on 18 Nov 2026.
+
+### Changed
+
+- README: key findings 7–10, business questions A09–A12, A10 and A12 result tables, limitations.
+- Query review log: A09 entry (original Q9 attempt and its fixes).
+- Data dictionary: `price_band`, `format`, chain flag and `demand_index`.
+- Banner: 12 business questions.
+
 ## v1.1 — 5 Nov 2026
 
 ### Added

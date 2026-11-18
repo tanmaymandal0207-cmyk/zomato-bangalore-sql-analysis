@@ -44,6 +44,10 @@ The project's main finding is about the data itself. **The dataset has 51,717 ro
 | 4 | **Online-ordering adoption ranges from 44% to 64%** across the 12 localities with 300+ restaurants. HSR leads at 63.9% and Electronic City trails at 44.0%. | [A08](results/a08_cuisine_diversity_and_online_adoption.csv) |
 | 5 | **Indiranagar is a delivery opportunity.** It is the best-rated large locality (3.79), yet 48% of its restaurants don't take online orders. | [A04](results/a04_high_rating_low_online_adoption.csv) |
 | 6 | **Specialty cuisines get the highest ratings, staple cuisines have the most restaurants.** North Indian is served by 40% of restaurants and is the #1 cuisine in all 12 large localities. European (4.19), Asian (4.07) and BBQ (4.01) have the highest ratings. | [A05](results/a05_top_cuisines_by_presence.csv) · [A06](results/a06_top_rated_cuisines.csv) |
+| 7 | **Votes are more concentrated than 80/20.** City-wide, 14.8% of restaurants hold 80% of votes (the top 20% hold 86.1%, Gini 0.824). 29 of the 53 localities with 50+ restaurants beat 80/20: Sarjapur Road is the most concentrated (10.4%), Jeevan Bhima Nagar the flattest (38.5%). | [A09](results/a09_pareto_by_locality.csv) |
+| 8 | **Table booking signals quality, not just price.** Booking restaurants rate 0.54 higher overall. Within the same price band the gap is still 0.30–0.40, and 0.36 once price is held constant. | [A10](results/a10_table_booking_vs_rating.csv) |
+| 9 | **Budget food looks under-supplied in Basavanagudi and Malleshwaram.** Their up-to-₹300 restaurants draw 3.4× and 2.2× the votes per outlet that the locality and price band predict, without one famous restaurant driving the number. | [A11](results/a11_supply_gaps_by_locality.csv) |
+| 10 | **Chains aren't rated higher, they're seen more.** Chain outlets (5+) average 3.63 against 3.62 for independents, but have 2.2× the median votes (47 vs 21) and much more online ordering (70% vs 47%). Independents rate higher in Cafés (3.81 vs 3.59) and Bakeries; chains rate higher in Delivery and Takeaway. | [A12](results/a12_chains_vs_independents.csv) |
 
 ## Case study: Popular isn't loved
 
@@ -63,7 +67,7 @@ flowchart LR
     D --> E[(restaurants_clean)]
     E --> F[03 Validation<br/>types · NULL parity<br/>grain reconciliation]
     F --> G[restaurant-grain CTE<br/>12,453 restaurants]
-    G --> H[04 Analysis<br/>A01–A08]
+    G --> H[04 Analysis<br/>A01–A12]
     H --> I[results/*.csv]
 ```
 
@@ -79,7 +83,7 @@ zomato-bangalore-sql-analysis/
 │   ├── 01_profiling/       # 13 column-level profiling scripts (00–12)
 │   ├── 02_cleaning/        # Cleaning preview + CREATE TABLE restaurants_clean
 │   ├── 03_validation/      # Clean-table checks + restaurant-grain reconciliation
-│   └── 04_analysis/        # A01–A08 business questions (restaurant grain)
+│   └── 04_analysis/        # A01–A12 business questions (restaurant grain)
 ├── case-studies/
 │   └── 01-popular-isnt-loved/  # Business case: popular, low-rated restaurants (SQL C01–C04, results, dashboard)
 ├── results/                # Query outputs captured from BigQuery (CSV)
@@ -129,8 +133,12 @@ Details: [`docs/data_quality_log.md`](docs/data_quality_log.md)
 | A06 | Which cuisines (≥ 100 restaurants) are rated highest? | [sql](sql/04_analysis/a06_top_rated_cuisines.sql) | [csv](results/a06_top_rated_cuisines.csv) |
 | A07 | Which locality × cuisine pairs are rated highest? | [sql](sql/04_analysis/a07_locality_cuisine_rating_matrix.sql) | [csv](results/a07_locality_cuisine_rating_matrix.csv) |
 | A08 | Which localities combine cuisine diversity with online adoption? | [sql](sql/04_analysis/a08_cuisine_diversity_and_online_adoption.sql) | [csv](results/a08_cuisine_diversity_and_online_adoption.csv) |
+| A09 | Do 20% of restaurants take 80% of votes, city-wide and in each locality (≥ 50 restaurants)? | [sql](sql/04_analysis/a09_pareto_by_locality.sql) | [csv](results/a09_pareto_by_locality.csv) |
+| A10 | Do restaurants with table booking rate higher once price is held constant? | [sql](sql/04_analysis/a10_table_booking_vs_rating.sql) | [csv](results/a10_table_booking_vs_rating.csv) |
+| A11 | Which locality × price band cells draw more votes per restaurant than expected (supply gaps)? | [sql](sql/04_analysis/a11_supply_gaps_by_locality.sql) | [csv](results/a11_supply_gaps_by_locality.csv) |
+| A12 | Do chain outlets out-perform independent restaurants, overall and by format? | [sql](sql/04_analysis/a12_chains_vs_independents.sql) | [csv](results/a12_chains_vs_independents.csv) |
 
-Each query began as a practice attempt. The originals are kept verbatim in [`sql/00_source`](sql/00_source), and [`docs/query_review_log.md`](docs/query_review_log.md) records what changed in review and why. One example: the original online-adoption percentage divided by `total × 100` and returned 0 for every locality.
+A01–A09 began as practice attempts; A10–A12 were written directly at restaurant grain. The originals are kept verbatim in [`sql/00_source`](sql/00_source), and [`docs/query_review_log.md`](docs/query_review_log.md) records what changed in review and why. One example: the original online-adoption percentage divided by `total × 100` and returned 0 for every locality.
 
 ## Selected results
 
@@ -167,6 +175,24 @@ Each query began as a practice attempt. The originals are kept verbatim in [`sql
 | American | 218 | 3.96 |
 | Finger Food | 179 | 3.94 |
 
+**A10 — Table booking vs rating (rated restaurants)**
+
+| Segment | With booking | Without | Rating with | Rating without | Gap (95% range) |
+|---|---:|---:|---:|---:|---|
+| All rated restaurants | 925 | 8,506 | 4.11 | 3.57 | +0.54 (0.52 to 0.56) |
+| Up to ₹300 *(small base)* | 7 | 3,279 | 3.86 | 3.54 | +0.31 (0.18 to 0.44) |
+| ₹301–600 | 67 | 3,771 | 3.96 | 3.56 | +0.40 (0.30 to 0.49) |
+| ₹601–1,000 | 320 | 1,164 | 4.01 | 3.63 | +0.38 (0.34 to 0.43) |
+| ₹1,000+ | 531 | 235 | 4.20 | 3.90 | +0.30 (0.24 to 0.36) |
+| **Price-adjusted** | | | | | **+0.36** |
+
+**A12 — Chains vs independents (all restaurants)**
+
+| Segment | Restaurants | Avg rating | Rated 4.0+ | Median votes | Online % | Avg cost for two |
+|---|---:|---:|---:|---:|---:|---:|
+| Chain (5+ outlets) | 2,542 | 3.63 | 25.3% | 47 | 70.3 | ₹460 |
+| Independent | 9,911 | 3.62 | 22.0% | 21 | 47.2 | ₹494 |
+
 ## How to reproduce
 
 1. Download `zomato.csv` from [Kaggle](https://www.kaggle.com/datasets/himanshupoddar/zomato-bangalore-restaurants) and load it into BigQuery as `<project>.<dataset>.restaurants`, with every column typed as `STRING`.
@@ -181,7 +207,9 @@ Each query began as a practice attempt. The originals are kept verbatim in [`sql
 - **Missing-value treatment is deferred.** Rows with NULL `location` (11 restaurants) are excluded, and cost NULLs are not imputed.
 - **Snapshot choice:** when a restaurant's rating differs between listings, the highest-vote snapshot is used. This is a documented assumption; the scrape has no timestamp.
 - **A04 threshold:** the spec's 3.8 cut-off returns no localities at restaurant grain, so 3.7 is applied and the reason is documented in the query.
-- **Next:** price-band analysis on `approx_cost_cleaned`, splitting `rest_type` into single types, `book_table` vs rating, and a Looker Studio dashboard over the results.
+- **A11 demand index:** votes measure engagement, not orders or revenue, so the index is a screen for where to look, not a market size.
+- **Chains (A12):** a brand is a chain when its exact name has 5+ outlets. Spelling variants of one brand count as separate brands.
+- **Next:** splitting `rest_type` into single types, a confidence band for the locality Pareto results, and a Looker Studio dashboard over the results.
 
 ## Changelog
 
