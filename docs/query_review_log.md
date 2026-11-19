@@ -34,5 +34,5 @@ Validation: [`03_validation/02_restaurant_grain_checks.sql`](../sql/03_validatio
 - `SAFE_DIVIDE` for every ratio; `ROUND` applied after the multiplication.
 - Deterministic ordering (secondary sort key) on every `LIMIT`.
 - Header block: business question → requirements → grain & rules → original line range → result file.
-- A01–A08 executed in BigQuery on 2026-11-03, A09–A12 on 2026-11-18; outputs saved to [`results/`](../results).
-- A10–A12 had no practice attempt; they were written directly at restaurant grain.
+- A01–A08 executed in BigQuery on 2026-11-03, A09–A12 on 2026-11-18, A13–A19 on 2026-11-19; outputs saved to [`results/`](../results).
+- A10–A19 had no practice attempt; they were written directly at restaurant grain.
