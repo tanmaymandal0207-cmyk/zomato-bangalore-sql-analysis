@@ -67,7 +67,7 @@ flowchart LR
     D --> E[(restaurants_clean)]
     E --> F[03 Validation<br/>types · NULL parity<br/>grain reconciliation]
     F --> G[restaurant-grain CTE<br/>12,453 restaurants]
-    G --> H[04 Analysis<br/>A01–A12]
+    G --> H[04 Analysis<br/>A01–A19]
     H --> I[results/*.csv]
 ```
 
@@ -83,7 +83,7 @@ zomato-bangalore-sql-analysis/
 │   ├── 01_profiling/       # 13 column-level profiling scripts (00–12)
 │   ├── 02_cleaning/        # Cleaning preview + CREATE TABLE restaurants_clean
 │   ├── 03_validation/      # Clean-table checks + restaurant-grain reconciliation
-│   └── 04_analysis/        # A01–A12 business questions (restaurant grain)
+│   └── 04_analysis/        # A01–A19 business questions (restaurant grain)
 ├── case-studies/
 │   └── 01-popular-isnt-loved/  # Business case: popular, low-rated restaurants (SQL C01–C04, results, dashboard)
 ├── results/                # Query outputs captured from BigQuery (CSV)
@@ -137,8 +137,15 @@ Details: [`docs/data_quality_log.md`](docs/data_quality_log.md)
 | A10 | Do restaurants with table booking rate higher once price is held constant? | [sql](sql/04_analysis/a10_table_booking_vs_rating.sql) | [csv](results/a10_table_booking_vs_rating.csv) |
 | A11 | Which locality × price band cells draw more votes per restaurant than expected (supply gaps)? | [sql](sql/04_analysis/a11_supply_gaps_by_locality.sql) | [csv](results/a11_supply_gaps_by_locality.csv) |
 | A12 | Do chain outlets out-perform independent restaurants, overall and by format? | [sql](sql/04_analysis/a12_chains_vs_independents.sql) | [csv](results/a12_chains_vs_independents.csv) |
+| A13 | Which dishes do customers single out most, and do restaurants known for them rate higher? | [sql](sql/04_analysis/a13_most_liked_dishes.sql) | [csv](results/a13_most_liked_dishes.csv) |
+| A14 | Which listing categories (Delivery, Dine-out, Buffet …) are crowded or premium? | [sql](sql/04_analysis/a14_listing_categories.sql) | [csv](results/a14_listing_categories.csv) |
+| A15 | Which localities have the most good (4.0+) and affordable (≤ ₹500 for two) restaurants? | [sql](sql/04_analysis/a15_affordable_quality_by_locality.sql) | [csv](results/a15_affordable_quality_by_locality.csv) |
+| A16 | Where are new (not yet rated) restaurants opening? | [sql](sql/04_analysis/a16_new_restaurants_by_locality.sql) | [csv](results/a16_new_restaurants_by_locality.csv) |
+| A17 | Which cuisines are priced as premium and which as value? | [sql](sql/04_analysis/a17_cuisine_price_positioning.sql) | [csv](results/a17_cuisine_price_positioning.csv) |
+| A18 | Where are the hero restaurants (4.5+ rating, 1,000+ votes)? | [sql](sql/04_analysis/a18_hero_restaurants_by_locality.sql) | [csv](results/a18_hero_restaurants_by_locality.csv) |
+| A19 | Which well-rated, popular restaurants still don't take online orders? | [sql](sql/04_analysis/a19_online_ordering_targets.sql) | [csv](results/a19_online_ordering_targets.csv) |
 
-A01–A09 began as practice attempts; A10–A12 were written directly at restaurant grain. The originals are kept verbatim in [`sql/00_source`](sql/00_source), and [`docs/query_review_log.md`](docs/query_review_log.md) records what changed in review and why. One example: the original online-adoption percentage divided by `total × 100` and returned 0 for every locality.
+A01–A09 began as practice attempts; A10–A19 were written directly at restaurant grain. The originals are kept verbatim in [`sql/00_source`](sql/00_source), and [`docs/query_review_log.md`](docs/query_review_log.md) records what changed in review and why. One example: the original online-adoption percentage divided by `total × 100` and returned 0 for every locality.
 
 ## Selected results
 
@@ -193,6 +200,18 @@ A01–A09 began as practice attempts; A10–A12 were written directly at restaur
 | Chain (5+ outlets) | 2,542 | 3.63 | 25.3% | 47 | 70.3 | ₹460 |
 | Independent | 9,911 | 3.62 | 22.0% | 21 | 47.2 | ₹494 |
 
+**A13–A19 — Small business problems**
+
+| ID | Problem | Answer | Action |
+|---|---|---|---|
+| A13 | Menu planning | Pasta (512 restaurants), Burgers (481) and Biryani (422) are the most-liked dishes. Restaurants known for Cocktails and Mocktails rate 0.36–0.37 above other restaurants with dish data; Paratha and Rolls 0.14 below. | Biryani, Paratha and Rolls are mass-market staples; Pasta, Pizza and Salads go with better-rated, pricier restaurants. |
+| A14 | Listing strategy | Delivery (9,320 restaurants) and Dine-out (8,029) dominate, and 7,077 restaurants (57%) are listed in 2+ categories. Drinks & nightlife, Pubs and bars and Buffet are small but premium: ₹1,270–1,446 for two, ratings ~4.0, 55–63% table booking. | Premium categories are the place for booking-led promotions; Delivery is crowded. |
+| A15 | Budget-dining guide | 879 restaurants (9.3% of rated) are rated 4.0+ at ≤ ₹500 for two. HSR (59), Jayanagar (55) and Indiranagar (54) have the most; Koramangala 5th Block (20.7%) and Malleshwaram (20.1%) the highest share. | Start a budget guide in Jayanagar, Koramangala 5th Block and Malleshwaram. |
+| A16 | Market growth | 596 restaurants (4.8%) are NEW, i.e. not yet rated. Electronic City leads with 86 (11.8% of its restaurants). Only 42.6% of new restaurants take online orders. | Target Electronic City for onboarding; new restaurants are an online-ordering sales pool. |
+| A17 | Menu pricing | Of 37 cuisines with 100+ restaurants, 14 price as Premium, 15 Mid and 8 Value. European is the most expensive (₹1,544, 3.17× the city average), Juices the cheapest (₹261). Premium cuisines average 3.89 against 3.63 for Mid and Value. | Premium pricing works for European, Asian and Continental menus; staples compete on price. |
+| A18 | Flagship partners | 107 hero restaurants (0.9%). Koramangala 5th Block has the most (15, 5.7 per 100 restaurants), then Indiranagar (13). | A flagship guide can start with Koramangala 5th Block and Indiranagar. |
+| A19 | Online-ordering sales list | 177 restaurants rated 4.0+ with 500+ votes, in delivery-friendly formats, don't take online orders. Truffles, Koramangala 5th Block (14,726 votes) tops the list. | Work the list in vote order; buffet chains (Barbeque Nation, AB's) need a separate pitch. |
+
 ## How to reproduce
 
 1. Download `zomato.csv` from [Kaggle](https://www.kaggle.com/datasets/himanshupoddar/zomato-bangalore-restaurants) and load it into BigQuery as `<project>.<dataset>.restaurants`, with every column typed as `STRING`.
@@ -209,6 +228,7 @@ A01–A09 began as practice attempts; A10–A12 were written directly at restaur
 - **A04 threshold:** the spec's 3.8 cut-off returns no localities at restaurant grain, so 3.7 is applied and the reason is documented in the query.
 - **A11 demand index:** votes measure engagement, not orders or revenue, so the index is a screen for where to look, not a market size.
 - **Chains (A12):** a brand is a chain when its exact name has 5+ outlets. Spelling variants of one brand count as separate brands.
+- **A16 NEW:** an unrated restaurant is a proxy for a recent opening; the scrape has no opening date. **A13:** only 4,631 restaurants (37%) have dish data, mostly popular ones.
 - **Next:** splitting `rest_type` into single types, a confidence band for the locality Pareto results, and a Looker Studio dashboard over the results.
 
 ## Changelog

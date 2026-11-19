@@ -1,5 +1,24 @@
 # Changelog
 
+## v1.3 — 19 Nov 2026
+
+### Added
+
+- Seven small business problems, each committed on its own (query, then result), run in BigQuery on 19 Nov 2026:
+  - A13 Most-liked dishes
+  - A14 Listing categories
+  - A15 Affordable quality by locality
+  - A16 New restaurants by locality
+  - A17 Cuisine price positioning
+  - A18 Hero restaurants by locality
+  - A19 Online-ordering onboarding targets
+
+### Changed
+
+- README: A13–A19 in business questions, a problem → answer → action table, limitations.
+- Query review log: execution dates for A13–A19.
+- Banner: 19 business questions.
+
 ## v1.2 — 18 Nov 2026
 
 ### Added
