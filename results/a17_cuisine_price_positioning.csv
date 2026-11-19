@@ -1,0 +1,38 @@
+cuisine,restaurants,avg_cost_for_two,price_index,avg_rating,price_tier
+European,107,1544.0,3.17,4.19,Premium
+Finger Food,179,1345.0,2.76,3.94,Premium
+Asian,214,1192.0,2.45,4.07,Premium
+Continental,934,967.0,1.98,3.89,Premium
+Thai,196,927.0,1.9,3.84,Premium
+BBQ,153,926.0,1.9,4.01,Premium
+American,218,909.0,1.86,3.96,Premium
+Italian,556,889.0,1.82,3.88,Premium
+Salad,190,865.0,1.78,3.91,Premium
+Mexican,109,738.0,1.51,3.94,Premium
+Seafood,386,690.0,1.42,3.72,Premium
+Pizza,437,684.0,1.4,3.72,Premium
+Mangalorean,126,667.0,1.37,3.7,Premium
+Mughlai,384,666.0,1.37,3.69,Premium
+Cafe,730,620.0,1.27,3.8,Mid
+North Indian,5022,555.0,1.14,3.57,Mid
+Chinese,3587,542.0,1.11,3.55,Mid
+Andhra,481,540.0,1.11,3.54,Mid
+Burger,404,539.0,1.1,3.73,Mid
+Arabian,246,520.0,1.07,3.59,Mid
+Momos,262,514.0,1.05,3.7,Mid
+Healthy Food,194,491.0,1.01,3.78,Mid
+Kebab,245,463.0,0.95,3.57,Mid
+Bengali,140,453.0,0.93,3.56,Mid
+Kerala,312,452.0,0.93,3.56,Mid
+Biryani,1747,450.0,0.92,3.52,Mid
+Desserts,1251,403.0,0.83,3.79,Mid
+Bakery,716,398.0,0.82,3.62,Mid
+South Indian,2369,398.0,0.82,3.57,Mid
+Fast Food,2128,387.0,0.79,3.56,Value
+Beverages,1152,371.0,0.76,3.73,Value
+Sandwich,214,371.0,0.76,3.69,Value
+Rolls,384,318.0,0.65,3.49,Value
+Ice Cream,471,292.0,0.6,3.78,Value
+Street Food,741,284.0,0.58,3.58,Value
+Mithai,272,265.0,0.54,3.6,Value
+Juices,298,261.0,0.54,3.6,Value
