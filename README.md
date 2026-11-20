@@ -243,6 +243,6 @@ Release notes are in [CHANGELOG.md](CHANGELOG.md) (current release: v1.1, 5 Nov 
 
 ---
 
-**Author:** Tanmay Mandal · [GitHub](https://github.com/tanmaymandal0207-cmyk)
+**Author:** Tanmay Mandal · [GitHub](https://github.com/tanmaymandal0207-cmyk) · [LinkedIn](https://www.linkedin.com/in/tanmay-mandal-286623247)
 
 © 2026 Tanmay Mandal. All rights reserved. The dataset belongs to its original publisher on Kaggle and is not included in this repository.
