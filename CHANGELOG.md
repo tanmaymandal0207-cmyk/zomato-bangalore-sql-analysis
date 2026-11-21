@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+### Docs
+
+- README: LinkedIn link added to the author line (20 Nov 2026).
+
 ## v1.3 — 19 Nov 2026
 
 ### Added
