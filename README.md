@@ -241,6 +241,8 @@ Release notes are in [CHANGELOG.md](CHANGELOG.md) (current release: v1.1, 5 Nov 
 - [IPL Match Intelligence](https://github.com/tanmaymandal0207-cmyk/IPL-Match-Intelligence-Player-Impact-Analysis): MySQL pipeline with data-quality checks and a live dashboard
 - [Inventory Reconciliation](https://github.com/tanmaymandal0207-cmyk/inventory-reconciliation): row-level reconciliation of 11 years of challans with an audit register
 
+<p align="right"><a href="#top">↑ Back to top</a></p>
+
 ---
 
 **Author:** Tanmay Mandal · [GitHub](https://github.com/tanmaymandal0207-cmyk) · [LinkedIn](https://www.linkedin.com/in/tanmay-mandal-286623247)
