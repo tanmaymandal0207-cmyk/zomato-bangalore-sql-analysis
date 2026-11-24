@@ -1,5 +1,7 @@
 # Data Quality & Cleaning Log
 
+[← Back to README](../README.md)
+
 Markdown version of [`zomato_data_quality_tracker.xlsx`](zomato_data_quality_tracker.xlsx), the working tracker kept during cleaning, plus the restaurant-grain findings added during the analysis phase.
 
 **Scope:** 51,717 records · 17 columns · BigQuery Standard SQL · raw table never modified
