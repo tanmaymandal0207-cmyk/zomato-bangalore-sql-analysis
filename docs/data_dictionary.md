@@ -1,5 +1,7 @@
 # Data Dictionary
 
+[← Back to README](../README.md)
+
 **Dataset:** Zomato Bangalore Restaurants (Kaggle, Himanshu Poddar) — scraped Zomato listings for Bangalore.
 **BigQuery project / dataset:** `zomatoanalytics.Zomato_csv`
 
