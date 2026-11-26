@@ -7,6 +7,16 @@
 - README: LinkedIn link added to the author line (20 Nov 2026).
 - README: back-to-top link above the author line (23 Nov 2026).
 
+## v1.4 — 26 Nov 2026
+
+### Added
+
+- Seven sample business problems, each committed on its own (query, then result), run in BigQuery on 26 Nov 2026: A20 rating distribution, A21 premium share by locality, A22 engagement by format, A23 table booking by locality, A24 specialists vs generalists, A25 low-rated share by locality, A26 dormant listings by locality.
+
+### Changed
+
+- README: A20–A26 in business questions and an answers table. Banner: 26 business questions.
+
 ## v1.3 — 19 Nov 2026
 
 ### Added

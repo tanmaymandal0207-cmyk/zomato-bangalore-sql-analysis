@@ -67,7 +67,7 @@ flowchart LR
     D --> E[(restaurants_clean)]
     E --> F[03 Validation<br/>types · NULL parity<br/>grain reconciliation]
     F --> G[restaurant-grain CTE<br/>12,453 restaurants]
-    G --> H[04 Analysis<br/>A01–A19]
+    G --> H[04 Analysis<br/>A01–A26]
     H --> I[results/*.csv]
 ```
 
@@ -83,7 +83,7 @@ zomato-bangalore-sql-analysis/
 │   ├── 01_profiling/       # 13 column-level profiling scripts (00–12)
 │   ├── 02_cleaning/        # Cleaning preview + CREATE TABLE restaurants_clean
 │   ├── 03_validation/      # Clean-table checks + restaurant-grain reconciliation
-│   └── 04_analysis/        # A01–A19 business questions (restaurant grain)
+│   └── 04_analysis/        # A01–A26 business questions (restaurant grain)
 ├── case-studies/
 │   └── 01-popular-isnt-loved/  # Business case: popular, low-rated restaurants (SQL C01–C04, results, dashboard)
 ├── results/                # Query outputs captured from BigQuery (CSV)
@@ -144,8 +144,15 @@ Details: [`docs/data_quality_log.md`](docs/data_quality_log.md)
 | A17 | Which cuisines are priced as premium and which as value? | [sql](sql/04_analysis/a17_cuisine_price_positioning.sql) | [csv](results/a17_cuisine_price_positioning.csv) |
 | A18 | Where are the hero restaurants (4.5+ rating, 1,000+ votes)? | [sql](sql/04_analysis/a18_hero_restaurants_by_locality.sql) | [csv](results/a18_hero_restaurants_by_locality.csv) |
 | A19 | Which well-rated, popular restaurants still don't take online orders? | [sql](sql/04_analysis/a19_online_ordering_targets.sql) | [csv](results/a19_online_ordering_targets.csv) |
+| A20 | How are restaurants spread across rating bands, and where do the votes go? | [sql](sql/04_analysis/a20_rating_distribution.sql) | [csv](results/a20_rating_distribution.csv) |
+| A21 | Which large localities have the most premium (₹1,000+) restaurants? | [sql](sql/04_analysis/a21_premium_share_by_locality.sql) | [csv](results/a21_premium_share_by_locality.csv) |
+| A22 | Which restaurant formats earn the most votes per outlet? | [sql](sql/04_analysis/a22_engagement_by_format.sql) | [csv](results/a22_engagement_by_format.csv) |
+| A23 | Where do restaurants already take table bookings? | [sql](sql/04_analysis/a23_table_booking_by_locality.sql) | [csv](results/a23_table_booking_by_locality.csv) |
+| A24 | Do specialists (1–2 cuisines) rate higher than generalists? | [sql](sql/04_analysis/a24_cuisine_breadth_vs_rating.sql) | [csv](results/a24_cuisine_breadth_vs_rating.csv) |
+| A25 | Which localities have the highest share of restaurants rated below 3.0? | [sql](sql/04_analysis/a25_low_rated_share_by_locality.sql) | [csv](results/a25_low_rated_share_by_locality.csv) |
+| A26 | Where are dormant (zero-vote) listings concentrated? | [sql](sql/04_analysis/a26_zero_vote_listings_by_locality.sql) | [csv](results/a26_zero_vote_listings_by_locality.csv) |
 
-A01–A09 began as practice attempts; A10–A19 were written directly at restaurant grain. The originals are kept verbatim in [`sql/00_source`](sql/00_source), and [`docs/query_review_log.md`](docs/query_review_log.md) records what changed in review and why. One example: the original online-adoption percentage divided by `total × 100` and returned 0 for every locality.
+A01–A09 began as practice attempts; A10–A26 were written directly at restaurant grain. The originals are kept verbatim in [`sql/00_source`](sql/00_source), and [`docs/query_review_log.md`](docs/query_review_log.md) records what changed in review and why. One example: the original online-adoption percentage divided by `total × 100` and returned 0 for every locality.
 
 ## Selected results
 
@@ -211,6 +218,18 @@ A01–A09 began as practice attempts; A10–A19 were written directly at restaur
 | A17 | Menu pricing | Of 37 cuisines with 100+ restaurants, 14 price as Premium, 15 Mid and 8 Value. European is the most expensive (₹1,544, 3.17× the city average), Juices the cheapest (₹261). Premium cuisines average 3.89 against 3.63 for Mid and Value. | Premium pricing works for European, Asian and Continental menus; staples compete on price. |
 | A18 | Flagship partners | 107 hero restaurants (0.9%). Koramangala 5th Block has the most (15, 5.7 per 100 restaurants), then Indiranagar (13). | A flagship guide can start with Koramangala 5th Block and Indiranagar. |
 | A19 | Online-ordering sales list | 177 restaurants rated 4.0+ with 500+ votes, in delivery-friendly formats, don't take online orders. Truffles, Koramangala 5th Block (14,726 votes) tops the list. | Work the list in vote order; buffet chains (Barbeque Nation, AB's) need a separate pitch. |
+
+**A20–A26 — Sample business problems**
+
+| ID | Problem | Answer |
+|---|---|---|
+| A20 | Quality health check | 17.2% of restaurants are rated 4.0+, yet they hold 71.1% of all votes. 24.3% have no rating yet. |
+| A21 | Where to open a premium restaurant | Indiranagar has the most premium-heavy mix (19.3% at ₹1,000+), then Koramangala 5th Block (15.6%). Premium places out-rate the rest in 18 of 19 large localities (Basavanagudi ties), e.g. 4.19 vs 3.69 in Indiranagar. |
+| A22 | Which formats draw attention | Casual Dining averages 439 votes per outlet and takes 54.4% of votes among these formats; Quick Bites has 5,133 outlets but 72 votes each. 41% of Delivery and Takeaway outlets have no votes. |
+| A23 | Table-reservation market | Indiranagar leads table booking (18.0%), then Jayanagar (11.2%); BTM is lowest (1.9%). |
+| A24 | Specialists vs generalists | Restaurants serving more cuisines rate higher: 45.1% of 5+ cuisine restaurants are rated 4.0+, against 18.5% of single-cuisine ones. They are also pricier (₹752 vs ₹397 for two). |
+| A25 | Quality risk | Marathahalli has the highest share of restaurants rated below 3.0 (11.2%), then Bellandur (10.3%) and Bannerghatta Road (9.9%). |
+| A26 | Listing hygiene | 24.1% of restaurants have zero votes. Electronic City is worst (37.3%); Koramangala 5th Block best (8.7%). |
 
 ## How to reproduce
 
